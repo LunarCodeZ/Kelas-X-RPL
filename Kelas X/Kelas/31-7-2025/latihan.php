@@ -1,3 +1,0 @@
-<?php
-Saya belajar php
-?>
