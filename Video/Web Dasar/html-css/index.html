@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Web sekolah">
-    <meta name="keywords" content="HTML, CSS, JavaScript, PHP">
-    <meta name="author" content="LunarCodeZ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Web sekolah" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+    <meta name="author" content="LunarCodeZ" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Pengertian :
     Jadi, tag meta merupakan single tag yang dimana tag ini tidak memiliki
     tutup seperti pada tag lainnya. Tag meta ini digunakan untuk menjelaskan
@@ -17,18 +17,143 @@
     Title digunakan sebagai judul dari website yang kita buat. Tulisan yang
     kite masukkan dalam tag title akan ditampilkan di bagian luar atas dari
     website kita-->
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>Website LunarCodeZ</h1>
     <!-- Heading :
-    Heading merupakan double tag di HTML yang memiliki tag pembuka dan
-    juga tag penutup. Heading memiliki 6 level atau tingkatan yang dimana
-    semakin kecil tingkatan yang kita ketik maka semakin besar juga
-    tulisan yang akan ditampilkan.
+    Heading merupakan double tag di HTML yang memiliki tag
+    pembuka dan juga tag penutup. Heading memiliki 6 level atau
+    tingkatan yang dimana semakin kecil tingkatan yang kita
+    ketik maka semakin besar juga tulisan yang akan ditampilkan.
     Pada umumnya Heading 1 digunakan untuk judul pada website, lalu
     heading 2 digunakan untuk subjudul, heading 3 untuk subsubjudul
     dan seterusnya-->
-    <img src="foto-profil.png" alt="Foto profil LunarCodeZ">
-    <p>Artikel untuk belajar pemrograman web.</p>
-</body>
+
+    <nav>
+      <ul>
+        <li>Halaman utama</li>
+        <li><a href="pages/tentang.html">Tentang</a></li>
+        <li><a href="pages/artikel.html">Artikel</a></li>
+        <li><a href="pages/hubungi-saya.html">Hubungi Saya</a></li>
+      </ul>
+      <!-- List:
+    List adalah double tag di HTML yang dapat kita gunakan untuk
+    membuat daftar. Ada 2 jenis lists, yaitu ;
+    1. Unordered list <ul> : list yang menggunakan bulletin di
+                             setiap awal tulisan.
+                             Contoh: 
+                             1. daftar 1
+                             2. daftar 2
+                             3. daftar seterusnya
+    2. Ordered list <ol> : list yang menggunakan nomor di
+                           setiap awal tulisan.
+                           Contoh :
+                           * daftar 1
+                           * daftar 2
+                           * daftar seterusnya
+     -->
+    </nav>
+
+    <hr />
+
+    <section>
+      <p>Artikel untuk belajar pemrograman web bersama LunarCodeZ.</p>
+      <!-- Paragraph :
+    Paragraph merupakan double tag yang dapat kita gunakan untuk
+    mengetik kalimat ataupun beberapa paragraf. Tag ini merupakan
+    tag yang paling banyak digunakan untuk wadah menulis teks
+    daripada tag-tag lain seperti heading.
+    -->
+
+      <img
+        src="png/foto-profil.png"
+        alt="Foto profil LunarCodeZ"
+        style="width: 100px"
+      />
+      <!-- Img :
+    Tag Image atau disingkat img dapat kita gunakan untuk
+    menampilkan gambar ke dalam website HTML yang akan kita
+    buat. Terdapat dua atribut penting dalam tag ini, yaitu
+    - src/source : dapat digunakan sebagai link url tempat
+                   atau lokasi suatu gambar. Bisa berupa link
+                   maupun lokasi path
+    - alt/alternative : dapat digunakan untuk menjelaskan apa
+                        maksud dari gambar yang telah kita
+                        masukkan tersebut jika gambar itu
+                        tidak dapat muncul karena suatu
+                        alasan.
+    -->
+
+      <h3>Bahasa yang dipelajari :</h3>
+      <table border="2px">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th colspan="2">Bahasa Pemrograman</th>
+            <th>Keterangan belajar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>Python</td>
+            <td rowspan="2">Back-End</td>
+            <td>Sedikit mahir</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>C</td>
+            <td>Masih baru belajar</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>HTML</td>
+            <td rowspan="2">Front-End</td>
+            <td>Sudah mahir</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>CSS</td>
+            <td>Belum terlalu mahir</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- Table :
+    Table merupakan double tag yang dapat kita gunakan
+    untuk membuat suatu tabel di HTML. Terdapat beberapa
+    tag yang harus diingat dalam pembuatan tabel di HTML ;
+    1. table : digunakan sebagai kontainer untuk membuat
+               suatu tabel. Tag ini dapat kita isi juga
+               dengan atribut yang bernama border agar
+               kita dapat memberikan bingkai pada tabel
+               yang akan kita buat
+    2. thead : digunakan untuk mengisi baris paling atas
+               atau table header
+    3. tbody : digunakan untuk mengisi baris kebawah
+               dari table header
+    4. tr : digunakan untuk membuat baris baru
+    5. th : digunakan untuk membuat baris table header
+            baru
+    6. td : digunakan untuk memasukkan data pada tabel
+    -->
+    </section>
+
+    <footer>
+      <hr />
+      <h3>Ayo bermain</h3>
+      <form action="" method="">
+        <input type="text" placeholder="Nama game anda" />
+        <input type="password" placeholder="Password akun anda" />
+        <select name="" id="">
+          <option value="1">MLBB</option>
+          <option value="2">Minecraft</option>
+          <option value="3">Roblox</option>
+          <option value="4">Soul Knight - Prequel</option>
+        </select>
+        <input type="submit" />
+      </form>
+    </footer>
+    
+  </body>
 </html>
