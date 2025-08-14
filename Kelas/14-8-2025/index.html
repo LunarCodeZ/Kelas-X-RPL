@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS 
+    <style>
+        body {
+            background-color: rgb(56, 56, 56);
+        }
+        h1, p, h3{
+            color: white;
+        }
+        table {
+            text-align: center;
+        }
+        th {
+            background-color: cyan;
+            transition: background-color 0.5s, font-size 0.5s, transform 0.5s;
+        }
+        td {
+            background-color: cornsilk;
+            transition: background-color 0.5s;
+        }
+        th:hover {
+            background-color: red;
+            font-size: 18px;
+            transform: translateY(-5px);
+        }
+        td:hover {
+            background-color: gray;
+        }
+    </style>
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Belajar container HTML">
+    <title>Belajar Container HTML</title>
+</head>
+<body>
+    <div>
+        <h1>Jadwal Pelajaran Kelas X-RPL</h1>
+        <hr />
+        <table border="5">
+            <thead>
+                <tr>
+                    <th>Jam Ke-</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jum'at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">PPLG</td>
+                    <td rowspan="2">Bahasa Indonesia</td>
+                    <td rowspan="2">PPKN</td>
+                    <td rowspan="4">PPLG</td>
+                    <td rowspan="2">Bahasa Indonesia</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td rowspan="2">Koding & AI</td>
+                    <td rowspan="2">IPAS</td>
+                    <td rowspan="3">PJOK</td>
+                    <td rowspan="2">Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td rowspan="3">PAI</td>
+                    <td rowspan="2">Sejarah</td>
+                    <td rowspan="4">Informatika</td>
+                    <td rowspan="2">IPAS</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td rowspan="2">Matematika</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>BK</td>
+                    <td rowspan="2">PPLG</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td rowspan="2">IPAS</td>
+                    <td rowspan="4">PPLG</td>
+                    <td rowspan="2">Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td rowspan="2">Matematika</td>
+                    <td rowspan="3"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td rowspan="2">Bahasa Jawa</td>
+                    <td rowspan="2">Seni Budaya</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Ekstra BTQ</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Daftar Harga Barang</h1>
+        <table border="5">
+            <thead>
+                <tr>
+                    <th rowspan="2">No.</th>
+                    <th rowspan="2">Kode Barang</th>
+                    <th rowspan="2">Nama Barang</th>
+                    <th colspan="2">Harga Jual</th>
+                </tr>
+                <tr>
+                    <th>Harga Grosir</th>
+                    <th>Harga Eceran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>001</td>
+                    <td>Kaos</td>
+                    <td>5000</td>
+                    <td>6000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>002</td>
+                    <td>Baju</td>
+                    <td>10000</td>
+                    <td>11000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>003</td>
+                    <td>Sepatu</td>
+                    <td colspan="2">10000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>004</td>
+                    <td>Sandal</td>
+                    <td colspan="2">5000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>005</td>
+                    <td>Topi</td>
+                    <td>5000</td>
+                    <td>6000</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>Contoh Tabel Kas Keuangan</h1>
+        <table border="5">
+            <thead>
+                <tr>
+                    <th rowspan="2">Akun</th>
+                    <th colspan="2">Saldo</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>Debit</th>
+                    <th>Kredit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kas</td>
+                    <td>Rp 53.000.000</td>
+                    <td rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Peralatan</td>
+                    <td>Rp 10.000.000</td>
+                </tr>
+                <tr>
+                    <td>Modal disetor</td>
+                    <td rowspan="2"></td>
+                    <td>Rp 50.000.000</td>
+                </tr>
+                <tr>
+                    <td>Utang Usaha</td>
+                    <td>Rp 5.000.000</td>
+                </tr>
+                <tr>
+                    <td>Beban gaji</td>
+                    <td>Rp 2.000.000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pendapatan</td>
+                    <td></td>
+                    <td>Rp 10.000.000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><strong>Rp 65.000.000</strong></td>
+                    <td><strong>Rp 65.000.000</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br />
+    <h3>Kesimpulan</h3>
+    <p style="text-indent: 15px;">Tabel adalah sekumpulan data yang tersusun didalam baris dan kolom. Kolom adalah susunan banyaknya data yang tersusun secara horizontal atau dari kiri ke kanan. Sedangkan Baris adalah banyaknya data yang tersusun secara vertikal atau dari atas ke bawah.</p>
+    <p style="text-indent: 15px;">Jika terdapat baris data yang berisi sama, maka kita dapat menggunakan fungsi dari atribut 'rowspan' pada tabel untuk menggabungkan baris data yang memiliki data yang sama. Sedangkan jika terdapat kolom data yang berisi sama, maka kita dapat menggunakan fungsi dari atribut 'colspan' pada tabel untuk menggabungkan kolom data yang memiliki data yang sama.</p>
+</body>
+</html>

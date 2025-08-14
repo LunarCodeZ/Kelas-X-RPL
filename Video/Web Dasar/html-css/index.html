@@ -17,11 +17,30 @@
     Title digunakan sebagai judul dari website yang kita buat. Tulisan yang
     kite masukkan dalam tag title akan ditampilkan di bagian luar atas dari
     website kita-->
+
+    <!-- Internal CSS: Style pada CSS yang digunakan untuk memberikan kustomisasi mengenai
+    desain kepada elemen dan tag yang dipilih didalam file HTML tersebut
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+    -->
+
+    <!-- External CSS: Penggunaan Style CSS dengan cara menghubungkan file HTML
+    ke lokasi file CSS untuk memberikan desain ataupun kustomisasi terhadap file
+    HTML yang telah dohubungkan. External CSS juga dapat digunakan untuk memberikan
+    desain CSS kepada file HTML yang lain agar memiliki desain yang sama seperti pada
+    file HTML yang telah kita hubungkan. Coba klik halaman 'tentang', 'artikel' ataupun
+    'hubungi saya', maka dapat kalian lihat bahwa ketiga file tersebut memiliki warna
+    latar belakang yang sama dengan file HTML saat ini. -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Website LunarCodeZ</h1>
-    <!-- Heading :
+    <div>
+      <h1>Website LunarCodeZ</h1>
+      <!-- Heading :
     Heading merupakan double tag di HTML yang memiliki tag
     pembuka dan juga tag penutup. Heading memiliki 6 level atau
     tingkatan yang dimana semakin kecil tingkatan yang kita
@@ -30,34 +49,37 @@
     heading 2 digunakan untuk subjudul, heading 3 untuk subsubjudul
     dan seterusnya-->
 
-    <nav>
-      <ul>
-        <li>Halaman utama</li>
-        <li><a href="pages/tentang.html">Tentang</a></li>
-        <li><a href="pages/artikel.html">Artikel</a></li>
-        <li><a href="pages/hubungi-saya.html">Hubungi Saya</a></li>
-      </ul>
-      <!-- List:
+      <!-- Inline CSS: Style pada CSS yang diterapkan kedalam suatu elemen HTML
+    <div style="margin-top: 50px;"> -->
+      <nav class="batas warna">
+        <ul>
+          <li>Halaman utama</li>
+          <li><a href="pages/tentang.html">Tentang</a></li>
+          <li><a href="pages/artikel.html">Artikel</a></li>
+          <li><a href="pages/hubungi-saya.html">Hubungi Saya</a></li>
+        </ul>
+        <!-- List:
     List adalah double tag di HTML yang dapat kita gunakan untuk
-    membuat daftar. Ada 2 jenis lists, yaitu ;
+    membuat daftar. Ada 2 jenis list, yaitu ;
     1. Unordered list <ul> : list yang menggunakan bulletin di
-                             setiap awal tulisan.
+                             setiap awal daftar.
                              Contoh: 
                              1. daftar 1
                              2. daftar 2
                              3. daftar seterusnya
     2. Ordered list <ol> : list yang menggunakan nomor di
-                           setiap awal tulisan.
+                           setiap awal daftar.
                            Contoh :
                            * daftar 1
                            * daftar 2
                            * daftar seterusnya
      -->
-    </nav>
+      </nav>
+    </div>
 
     <hr />
 
-    <section>
+    <section id="bekgron kiri">
       <p>Artikel untuk belajar pemrograman web bersama LunarCodeZ.</p>
       <!-- Paragraph :
     Paragraph merupakan double tag yang dapat kita gunakan untuk
@@ -66,11 +88,7 @@
     daripada tag-tag lain seperti heading.
     -->
 
-      <img
-        src="png/foto-profil.png"
-        alt="Foto profil LunarCodeZ"
-        style="width: 100px"
-      />
+      <img src="png/foto-profil.png" alt="Foto profil LunarCodeZ" />
       <!-- Img :
     Tag Image atau disingkat img dapat kita gunakan untuk
     menampilkan gambar ke dalam website HTML yang akan kita
@@ -136,12 +154,31 @@
     5. th : digunakan untuk membuat baris table header
             baru
     6. td : digunakan untuk memasukkan data pada tabel
-    -->
+    --></section>
+
+    <br />
+    <section>
+      <h3>Video</h3>
+      <video
+        src="video/Tutorial HTML.mp4"
+        width="300"
+        height="200"
+        controls
+      ></video>
+    </section>
+    <section>
+      <h3>Audio</h3>
+      <audio src="audio/Mars Smenda.mpeg" controls></audio>
+    </section>
+    <section>
+      <h3>Canvas</h3>
+      <canvas width="300" height="200">
+        <!-- Isi dengan game -->
+      </canvas>
     </section>
 
     <footer>
-      <hr />
-      <h3>Ayo bermain</h3>
+      <h3>Form Ayo Bermain</h3>
       <form action="" method="">
         <input type="text" placeholder="Nama game anda" />
         <input type="password" placeholder="Password akun anda" />
@@ -154,6 +191,5 @@
         <input type="submit" />
       </form>
     </footer>
-    
   </body>
 </html>
