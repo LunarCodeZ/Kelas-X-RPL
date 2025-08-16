@@ -1,40 +1,57 @@
 body {
-    background-color: cornsilk;
+    background-color: rgb(45, 45, 45);
+    color: white;
+}
+
+.border {
+    border: 1px solid white;
+    margin: auto;
+}
+
+.wadah {
+    width: 1200px; /* unit absolute atau mutlak */
+}
+
+.warna {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    color: black;
 }
 
 img {
     width: 200px;
 }
 
-div {
-    border: 2px solid black;
-    margin: 50px 0 0 20px;
-    /* margin-left: 100px; */
-
-    padding-top: 20px;
+.card {
+    width: 30%; /* unit relative atau menyesuaikan */
 }
 
-nav {
-    border: 3px solid grey;
-}
-/* CSS Class: Elemen pada HTML dapat memiliki lebih dari satu kelas CSS */
-.batas {
-    margin-left: 100px;
-}
+.horizontal {
+    display: flex;
+    /* Flex firection : digunakan untuk mengatur arah setiap elemen pada html.
+                        Ada 4 jenis flex direction, yaitu;
+                        1. row untuk mengatur arah elemen dari atas ke bawah
+                        2. column untuk mengatur arah elemen dari kiri ke kanan
+                        3. row-reverse untuk mengatur arah elemen dari bawah ke atas
+                        4. column-reverse untuk mengatur arah elemen dari kanan ke kiri
+    flex-direction: row;
+    flex-direction: column;
+    */
+    justify-content: center;
+    padding: 10px;
+    gap: 10px; /* Gap untuk memberikan jarak antara elemen pada html*/
 
-.warna {
-    background-color: aliceblue;
-}
-
-
-/* CSS ID: Hanya terdapat satu saja ID pada setiap elemen-elemen di HTML,
-tidak boleh lebih dari 1 */
-#bekgron {
-    background-color: rgb(255, 227, 163);
-    position: sticky;
-    top: 200px;
 }
 
-#kiri {
-    margin-left: 200px;
+.rata {
+    text-align: center;
+    /* Text-align : digunakan untuk meratakan posisi penulisan pada teks.
+                    Ada 4 jenis text-align, yaitu ;
+                    1. left untuk meratakan teks dari kiri
+                    2. right untuk meratakan teks dari kanan
+                    3. center untuk meratakan teks ke tengah
+                    4. justify untuk meratakan teks dari kiri ke kanan
+                       secara rapi
+    text-align: left;
+    text-align: right;
+    */
 }

@@ -1,0 +1,40 @@
+body {
+    background-color: cornsilk;
+}
+
+img {
+    width: 200px;
+}
+
+div {
+    border: 2px solid black;
+    margin: 50px 0 0 20px;
+    /* margin-left: 100px; */
+
+    padding-top: 20px;
+}
+
+nav {
+    border: 3px solid grey;
+}
+/* CSS Class: Elemen pada HTML dapat memiliki lebih dari satu kelas CSS */
+.batas {
+    margin-left: 100px;
+}
+
+.warna {
+    background-color: aliceblue;
+}
+
+
+/* CSS ID: Hanya terdapat satu saja ID pada setiap elemen-elemen di HTML,
+tidak boleh lebih dari 1 */
+#bekgron {
+    background-color: rgb(255, 227, 163);
+    position: sticky;
+    top: 200px;
+}
+
+#kiri {
+    margin-left: 200px;
+}
