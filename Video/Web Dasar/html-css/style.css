@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(45, 45, 45);
     color: white;
@@ -9,7 +13,51 @@ body {
 }
 
 .wadah {
-    width: 1200px; /* unit absolute atau mutlak */
+    width: 700px; /* unit absolute atau mutlak */
+}
+
+/* Pseudo class :hover - Memberikan efek pada elemen setiap
+                         kali kursor mouse berada pada elemen tersebut */
+h2:hover {
+    background-color: rgb(4, 4, 4);
+}
+
+.card:target {
+    background-color: gray;
+}
+
+/* Pseudo class ::first-letter - memberikan desain kepada huruf depan elemen
+                                 teks seperti paragraf, header, dan juga precode */
+/* Pseudo class ::first-line - memberikan desain kepada satu garis pertama dalam elemen
+                               teks seperti paragraf, header, dan juga precode */
+p::first-letter {
+    color: gray;
+    font-size: xx-large;
+}
+
+.display { 
+    /* display: none; - Untuk menyembunyikan elemen-elemen yang ada di dalamnya */
+    /* display: inline; - membuat suatu elemen ditampilkan dalam satu kolom tetapi bisa
+                          jadi elemen-elemen tersebut berada di luar ataupun bertabrakan
+                          dengan container atau wadahnya */
+    /* display: block; - membuat suatu elemen memiliki area yang memanjang ke kanan
+                         hingga menyentuh batas container atau wadah */
+    display: inline-block; /* membuat suatu elemen ditampilkan dalam satu kolom didalam
+                              container atau wadah */
+    padding: 3%;
+    /* animation-delay: 3s; */
+}
+
+.display:hover {
+    animation-name: animasi;
+    animation-duration: 1s;
+}
+
+@keyframes animasi {
+    0% {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
 }
 
 .warna {
@@ -18,11 +66,13 @@ body {
 }
 
 img {
-    width: 200px;
+    width: 100px;
 }
 
 .card {
     width: 30%; /* unit relative atau menyesuaikan */
+    padding: 5%;
+    box-sizing: border-box; /* Membatasi elemen agar tidak keluar dari containernya */
 }
 
 .horizontal {
@@ -54,4 +104,24 @@ img {
     text-align: left;
     text-align: right;
     */
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .tempat {
+        width: 80%;
+    }
+
+    .lebar {
+        width: 100%;
+    }
+
+    .respon {
+        display: flex;
+        flex-direction: column;
+    }
 }

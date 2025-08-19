@@ -31,8 +31,8 @@ nav {
 tidak boleh lebih dari 1 */
 #bekgron {
     background-color: rgb(255, 227, 163);
-    position: sticky;
-    top: 200px;
+    position: relative;
+    top: 20px;
 }
 
 #kiri {
