@@ -5,6 +5,18 @@ body::after {
     top: 0;
 }
 
+.carousel-item img {
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+.kotak {
+    background-color: cornsilk;
+    height: 10vw;
+}
+
 @media (min-width: 576px) {
     body::after {
         content: "SM";
