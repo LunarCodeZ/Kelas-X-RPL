@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(42, 42, 42);
+}
+
+.lima {
+    height: 55px;
+}
+
+.seratus {
+    height: 110px;
+}
+
+.merah {
+    background: red;
+}
+
+.kuning {
+    background: yellow;
+}
+
+.hijau {
+    background: green;
+}
+
+.biru {
+    background: blue;
+}
+
+.jingga {
+    background: orange;
+}
