@@ -1,48 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Hubungkan ke CSS Bootstrap Lokal -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <!-- Episode 1
-    <h1>Hello, world!</h1>
-    <h1>Kita akan belajar menggunakan Bootstrap CSS</h1>
+  <!-- Hubungkan ke CSS Bootstrap Lokal -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <h2>Pemrograman website</h2>
-    -->
+  <title>Belajar Bootstrap</title>
+</head>
 
+<body>
+  <!-- Navbar  -->
+  <nav class="navbar navbar-expand-sm bg-info sticky-top">
     <div class="container">
-        <div class="row">
-            <div class="col lima biru">Kolom 1</div>
-            <div class="col lima kuning">Kolom 2</div>
-        </div>
-        <div class="row">
-            <!-- Pastikan jumlah dari col dibawah ini bernilai 12 -->
-            <div class="col-xl-8 col-lg-2 col-md-4 col-sm-2 merah">
-                Baris 2 Kolom 1
-            </div>
-            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 jingga">
-                Baris 2 Kolom 2
-            </div>
-            <div class="col-xl-2 col-lg-6 col-md-4 col-sm-4 biru">
-                Baris 2 kolom 3
-            </div>
-        </div>
-    </div>
-    
+      <a class="navbar-brand" href="#">
+        <img src="images/profil-picture.png" alt="Logo profil" width="30" />
+      </a>
+      <div class="">
+        <!-- Tombol toggle untuk perangkat berukuran kecil -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Hubungkan ke JavaScript Booststrap Lokal -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+        <!-- Navbar page menu  -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#belajar">Belajar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pemenang">Pemenang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang">Kursus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Kontak</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">
+              Cari
+            </button>
+          </form>
+        </div>
+        <!-- End of navbar page menu -->
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir dari Navbar  -->
+
+  <!-- Carousel / Slider -->
+  <div class="container mt-4 mb-3">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- carousel-inner: isi dari carousel  -->
+        <div class="carousel-item active">
+          <img src="images/python-wallpaper.png" class="d-block" alt="..." />
+          <div class="carousel-caption d-md-block">
+            <p>Bahasa pemrograman termudah</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/java-wallpaper.png" class="d-block" alt="..." />
+          <div class="carousel-caption d-md-block">
+            <p>
+              Bahasa pemrograman untuk pembuatan aplikasi. Rumit, tapi
+              fiturnya lengkap !
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/kotlin-wallpeper.jpg" class="d-block" alt="..." />
+          <div class="carousel-caption d-md-block">
+            <p>Bahasa pemrograman paling mudah untuk pembuatan android</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tombol kiri & kanan  -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- Akhir dari Carousel  -->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <!-- Jumbotron  -->
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-1">Belajar Pemrograman</h1>
+      <p class="lead">
+        Belajar pemrograman itu ternyata mudah, kita hanya membutuhkan
+        belajar, belajar dan belajar. Diikuti dengan latihan, latihan dan
+        latihan.
+      </p>
+      <hr class="my-4" />
+      <p>
+        " Kunci utamanya ialah, walaupun kita ingin menjadi programmer, waktu
+        itu masih terlalu jauh dari kita. Oleh karena itu, tetaplah bersabar
+        dan jangan lupa untuk selalu berusaha agar keinginanmu menjadi seorang
+        programmer dapat tercapai "
+      </p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Belajar lebih dalam</a>
+    </div>
+  </div>
+  <!-- Akhir dari Jumbotron  -->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <!-- Card  -->
+  <div class="container">
+    <div class="row" id="belajar">
+      <div class="col-lg-4 d-flex justify-content-center">
+        <div class="card border-0">
+          <img src="images/python-wallpaper.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">
+              Bahasa pemrograman paling mudah untuk dipelajari oleh para
+              permula yang ingin menjadi seorang programmer.
+            </p>
+            <h5 class="card-title">Level: Mudah</h5>
+            <a href="#" class="btn btn-primary">Belajar Python</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 d-flex justify-content-center">
+        <div class="card border-0">
+          <img src="images/godot-wallpaper.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Godot</h5>
+            <p class="card-text">
+              Aplikasi Engine untuk membuat sebuah game 2D atau 3D sederhana
+              seperti Unity. Menggunakan bahasa GDScript yang merupakan bahasa
+              gabungan antara Python dan juga JavaScript.
+            </p>
+            <h5 class="card-title">Level: Menengah</h5>
+            <a href="#" class="btn btn-primary">Belajar Godot</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 d-flex justify-content-center">
+        <div class="card border-0">
+          <img src="images/java-wallpaper.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Java</h5>
+            <p class="card-text">
+              Bahasa pemrograman untuk membuat suatu aplikasi android dengan
+              fitur yang lengkap dan juga kompleks.
+            </p>
+            <h5 class="card-title">Level: Sulit</h5>
+            <a href="#" class="btn btn-primary">Belajar Java</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Akhir dari Card  -->
+
+  <br /><br /><br /><br /><br />
+
+  <!-- Table  -->
+  <div class="container" id="pemenang">
+    <div class="row text-center bg-danger text-light">
+      <div class="col">
+        <h1>Pemenang Lomba</h1>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-4">
+        <img src="images/godot-wallpaper.png" width="300px" alt="" />
+      </div>
+      <div class="col-lg-8">
+        <table class="table mt-3 table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">Juara</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Sekolah</th>
+              <th scope="col">Hadiah</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Erik</td>
+              <td>SMKN 2 Buduran</td>
+              <td>Sertifikat + Piala + Medali Emas + Rp 5.500.000</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Agus</td>
+              <td>SMKN 3 Buduran</td>
+              <td>Sertifikat + Medali Perak + Rp 2.500.000</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Budi</td>
+              <td>SMKN 1 Buduran</td>
+              <td>Sertifikat + Medali Perunggu + Rp 1.000.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Akhir dari Table  -->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="jumbotron jumbotron-fluid bg-warning">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <p>
+            <strong> LunarCodeZ </strong><br />Sidoarjo, Jawa Timur <br />Indonesia
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <p>
+            <strong> Pembayaran Kursus </strong>
+            <br /> DANA <br />08**********
+            <br /> OVO <br />08**********
+            <br /> Gopay <br />08**********
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <p>
+            <strong> Tentang Kami </strong>
+            <br /> Website ini dibuat pada tanggal 5 September 2025
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal  -->
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Formulir Kontak
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div id="emailHelp" class="form-text">
+                    Kami tidak akan membagikan alamat email anda kepada
+                    siapapun !
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Alamat</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Kota</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Kode Pos</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+            Simpan Perubahan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Grid Layout
+  <div class="container">
+    <div class="row">
+      <div class="col lima biru">Kolom 1</div>
+      <div class="col lima kuning">Kolom 2</div>
+    </div>
+    <div class="row">
+      ## Pastikan jumlah dari col dibawah ini bernilai 12 ##
+      <div class="col-xl-8 col-lg-2 col-md-4 col-sm-2 merah">
+        Baris 2 Kolom 1
+      </div>
+      <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6 jingga">
+        Baris 2 Kolom 2
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-4 biru">
+        Baris 2 kolom 3
+      </div>
+    </div>
+  </div>
+  Akhir dari Grid Layout -->
+
+  <!-- Hubungkan ke JavaScript Booststrap Lokal -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
 </html>

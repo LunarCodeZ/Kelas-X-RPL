@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(42, 42, 42);
+    background-color: cornsilk;
 }
 
 .lima {
@@ -28,4 +28,37 @@ body {
 
 .jingga {
     background: orange;
+}
+
+
+.carousel-item img {
+    height: 200px;
+}
+
+.container > .jumbotron {
+    padding: 0.5rem;
+    text-align: center;
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom right, rgb(0, 247, 255), rgb(0, 255, 30));
+}
+
+.container h1 {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.card img {
+    height: 180px;
+}
+
+.card {
+    width: 18rem;
+}
+
+@media (min-width: 560px) {
+    .carousel-item img {
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
