@@ -1,0 +1,66 @@
+#rumah {
+    width: 80%;
+    margin: auto;
+}
+
+.kompetensi {
+    color: red;
+    font-style: italic;
+    font-size: large;
+}
+
+.pendidikan {
+    height: 500px;
+}
+
+.huruf {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+.jarak {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.warna {
+    background-color: orange;
+    width: 200px;
+    text-align: center;
+}
+
+
+/* Desain Tugas */
+
+body {
+    font-family: cursive;
+    margin: 0;
+}
+
+img {
+    width: 15vw;
+    border: 4px solid black;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+}
+
+.page-header {
+    background-image: linear-gradient(to bottom right, aqua, yellow);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 3px solid black;
+}
+
+.page-header > h1 {
+    margin: 10px 10px 10px 30px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

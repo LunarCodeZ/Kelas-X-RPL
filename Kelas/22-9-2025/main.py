@@ -1,14 +1,19 @@
 
 nilai = int(input("Masukkan Nilai: "))
-print(f"\n Nilai Anda: {nilai}")
+print(f"\nNilai Anda: {nilai}")
 
-if nilai >= 90:
-    print("Anda lulus dan mendapatkan A+ !!")
-elif nilai >= 70:
-    print("Selamat, anda dapat A !")
-elif nilai >= 50:
-    print("Anda dapat B")
-elif nilai >= 30:
-    print("Nilai anda C")
+if nilai >= 0 and nilai <= 100:
+
+    if nilai >= 90:
+        print("Anda lulus dan mendapatkan A+ !!")
+    elif nilai >= 70:
+        print("Selamat, anda dapat B !")
+    elif nilai >= 50:
+        print("Anda dapat C")
+    elif nilai >= 30:
+        print("Nilai anda D")
+    else:
+        print("Anda gagal..")
+        
 else:
-    print("Anda gagal..")
+    print("Nilai tidak boleh lebih dari 100 dan kurang dari 0!")

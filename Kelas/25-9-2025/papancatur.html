@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Papan Catur</title>
+
+    <style>
+        body {
+            background-color: rgb(43, 43, 43);
+            color: white;
+            font-family: cursive;
+            text-align: center;
+        }
+
+        .chess-row {
+            position: relative;
+        }
+
+        .chess-container {
+            background-color: rgb(255, 136, 0);
+            width: 422px;
+            height: 422px;
+            margin: auto;
+            border: 2px solid black;
+            position: relative;
+
+            /* top: 10px;
+            bottom: 10px;
+            right: 10px;
+            left: 10px; */
+
+            /* Ubah kode diatas untuk memindahkan posisi papan catur */
+        }
+
+        .chess-tile {
+            background-color: rgb(192, 101, 31);
+            height: 140px;
+            width: 140px;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Papan Catur Ukuran 3x3</h1>
+    <div class="chess-container">
+        <div class="chess-row">
+            <div class="chess-tile"></div>
+            <div class="chess-tile" style="margin-left: auto; bottom: 141px;"></div>
+        </div>
+        <div class="chess-row" style="bottom: 104px;">
+            <div class="chess-tile" style="margin: auto; bottom: 40px;"></div>
+        </div>
+        <div class="chess-row" style="bottom: 146px;">
+            <div class="chess-tile"></div>
+            <div class="chess-tile" style="margin-left: auto; bottom: 141px;"></div>
+        </div>
+    </div>
+</body>
+</html>

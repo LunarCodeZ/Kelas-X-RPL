@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zodiac Guesser</h1>
+    
+    <form action="">
+        <fieldset>
+            Masukkan Bulan:
+            <input type="number" id="month"><br><br>
+            Masukkan Tanggal:
+            <input type="number" id="date"><br><br>
+            <button onclick="checkZodiac()">Check My Zodiac !</button>
+        </fieldset>
+    </form>
+    <h2 id="output">Hello</h2>
+    <script>
+        var month = document.getElementById("month").value;
+        var date = document.getElementById("date");
+        var output = document.getElementById("output");
+
+        // document.getElementById("output").innerHTML = "Month 1";
+
+        function checkZodiac() {
+
+            document.getElementById("output").innerHTML = "Helo";
+1
+            if (month >= 1 && month <= 12) {
+
+                switch (month) {
+                    case 1:
+                        document.getElementById("output").innerHTML = "Month 1 or 2";
+                        break;
+                
+                    default:
+                        break;
+            }
+        }}
+    </script>
+</body>
+</html>

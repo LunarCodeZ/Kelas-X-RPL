@@ -33,18 +33,25 @@
         function tesHasil() {
             var hasilSaya = document.getElementById("nomor").value;
 
-            if (hasilSaya >= 90) {
-                document.getElementById("hasil").innerHTML = "Kamu dapat A";
+            if (hasilSaya >= 0 && hasilSaya <= 100) {
+
+                if (hasilSaya >= 90) {
+                    document.getElementById("hasil").innerHTML = "Kamu dapat A";
+                }
+                else if (hasilSaya >= 70) {
+                    document.getElementById("hasil").innerHTML = "Kamu dapat B";
+                }
+                else if (hasilSaya >= 40) {
+                    document.getElementById("hasil").innerHTML = "Kamu dapat C";
+                }
+                else {
+                    document.getElementById("hasil").innerHTML = "Kamu Gagal...";
+                }
+                
+            } else {
+                document.getElementById("hasil").innerHTML = "Nilai tidak boleh kurang dari 0 dan lebih dari 100 !";
             }
-            else if (hasilSaya >= 70) {
-                document.getElementById("hasil").innerHTML = "Kamu dapat B";
-            }
-            else if (hasilSaya >= 40) {
-                document.getElementById("hasil").innerHTML = "Kamu dapat C";
-            }
-            else {
-                document.getElementById("hasil").innerHTML = "Kamu Gagal...";
-            }
+
         }
 
     </script>
