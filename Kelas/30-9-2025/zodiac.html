@@ -4,42 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: cursive;
+        }
+
+        #zodiac-desc {
+            margin: 10px 20px 20px 10px;
+            text-indent: 20px;
+            text-align: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Zodiac Guesser</h1>
+    <h1 style="text-align: center;">Zodiac Guesser</h1>
     
-    <form action="">
-        <fieldset>
-            Masukkan Bulan:
-            <input type="number" id="month"><br><br>
-            Masukkan Tanggal:
-            <input type="number" id="date"><br><br>
-            <button onclick="checkZodiac()">Check My Zodiac !</button>
-        </fieldset>
-    </form>
-    <h2 id="output">Hello</h2>
-    <script>
-        var month = document.getElementById("month").value;
-        var date = document.getElementById("date");
-        var output = document.getElementById("output");
+    <fieldset>
+        Masukkan Bulan:
+        <input type="number" id="month"><br><br>
+        Masukkan Tanggal:
+        <input type="number" id="date"><br><br>
+        <button onclick="checkZodiac()">Cek Zodiak</button>
+    </fieldset>
 
-        // document.getElementById("output").innerHTML = "Month 1";
+    <h2 id="zodiac-name" style="text-align: center;">Zodiak anda:</h2>
+    <p id="zodiac-desc">
+        Isi tanggal dan bulan diatas :)
+    </p>
+
+    <script>
+        var month;
+        var date;
+        var zodiac;
+        var zodiacName = "Zodiak anda: ";
+        var zodiacDesc;
 
         function checkZodiac() {
+            month = document.getElementById("month").value;
+            date = document.getElementById("date").value;
 
-            document.getElementById("output").innerHTML = "Helo";
-1
-            if (month >= 1 && month <= 12) {
+            if (month > 0 && month < 12) {
 
-                switch (month) {
-                    case 1:
-                        document.getElementById("output").innerHTML = "Month 1 or 2";
-                        break;
-                
-                    default:
-                        break;
+                document.getElementById("zodiac-desc").style.textAlign = "justify";
+
+                if (month == 1) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 20) {
+                            zodiac = "Aquarius";
+                        } else {
+                            zodiac = "Capricorn";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 2) {
+                    if (date >= 1 && date <= 28) {
+                        if (date <= 20) {
+                            zodiac = "Aquarius";
+                        } else {
+                            zodiac = "Pisces";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 28";
+                    }
+                }
+
+                if (month == 3) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 20) {
+                            zodiac = "Pisces";
+                        } else {
+                            zodiac = "Aries";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 4) {
+                    if (date >= 1 && date <= 30) {
+                        if (date <= 10) {
+                            zodiac = "Pisces";
+                        } else {
+                            zodiac = "Taurus";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 30";
+                    }
+                }
+
+                if (month == 5) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 20) {
+                            zodiac = "Taurus";
+                        } else {
+                            zodiac = "Gemini";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 6) {
+                    if (date >= 1 && date <= 30) {
+                        if (date <= 20) {
+                            zodiac = "Gemini";
+                        } else {
+                            zodiac = "Cancer";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 30";
+                    }
+                }
+
+                if (month == 7) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 22) {
+                            zodiac = "Cancer";
+                        } else {
+                            zodiac = "Leo";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 8) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 22) {
+                            zodiac = "Leo";
+                        } else {
+                            zodiac = "Virgo";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 9) {
+                    if (date >= 1 && date <= 30) {
+                        if (date <= 22) {
+                            zodiac = "Virgo";
+                        } else {
+                            zodiac = "Libra";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 30";
+                    }
+                }
+
+                if (month == 10) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 22) {
+                            zodiac = "Libra";
+                        } else {
+                            zodiac = "Scorpio";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+                if (month == 11) {
+                    if (date >= 1 && date <= 30) {
+                        if (date <= 21) {
+                            zodiac = "Scorpio";
+                        } else {
+                            zodiac = "Sagittarius";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 30";
+                    }
+                }
+
+                if (month == 12) {
+                    if (date >= 1 && date <= 31) {
+                        if (date <= 21) {
+                            zodiac = "Sagittarius";
+                        } else {
+                            zodiac = "Capricorn";
+                        }
+                        showZodiac();
+                    } else {
+                        document.getElementById("zodiac-name").innerHTML = zodiacName + "Tidak valid !";
+                        document.getElementById("zodiac-desc").innerHTML = "Tanggal tidak boleh kurang dari 1 dan lebih dari 31";
+                    }
+                }
+
+            } else {
+                document.getElementById("zodiac-desc").style.textAlign = "center";
+                document.getElementById("zodiac-desc").innerHTML = "Bulan tidak boleh lebih dari 12 dan kurang dari 1 !";
             }
-        }}
+        }
+
+        function showZodiac() {
+
+            if (zodiac == "Aries") {
+                zodiacDesc = "Anda berjiwa pemimpin, penuh semangat, dan sukaAries berjiwa pemimpin, penuh semangat, dan suka tantangan. Mereka spontan, energik, dan cepat mengambil keputusan, tapi terkadang terlalu impulsif dan mudah marah. Meski keras kepala, Aries punya keberanian besar dan selalu ingin jadi yang pertama dalam segala hal.";
+            }
+
+            else if (zodiac == "Taurus") {
+                zodiacDesc = "Taurus dikenal sabar, setia, dan pekerja keras. Mereka menyukai kenyamanan, keindahan, dan kestabilan hidup. Namun, sifat keras kepala dan sulit berubah bisa jadi kekurangannya. Taurus sangat bisa dipercaya dan selalu menjaga komitmen.";
+            }
+
+            else if (zodiac == "Gemini") {
+                zodiacDesc = "Gemini cerdas, komunikatif, dan mudah beradaptasi. Mereka suka belajar hal baru dan pandai bergaul, tapi kadang mudah bosan dan sulit fokus. Gemini punya dua sisi kepribadian — menyenangkan sekaligus penuh misteri.";
+            }
+
+            else if (zodiac == "Cancer") {
+                zodiacDesc = "Cancer lembut, penyayang, dan sangat peduli dengan keluarga. Mereka sensitif dan intuitif, tapi mudah tersinggung jika merasa tidak dihargai. Cancer juga setia dan suka melindungi orang yang mereka cintai.";
+            }
+
+            else if (zodiac == "Leo") {
+                zodiacDesc = "Leo percaya diri, karismatik, dan lahir sebagai pemimpin alami. Mereka suka menjadi pusat perhatian dan punya rasa bangga tinggi. Meski kadang terkesan egois, Leo berhati hangat dan sangat loyal terhadap teman dan keluarga.";
+            }
+
+            else if (zodiac == "Virgo") {
+                zodiacDesc = "Virgo perfeksionis, analitis, dan suka keteraturan. Mereka teliti dalam setiap detail dan punya rasa tanggung jawab besar. Namun, kadang terlalu kritis baik pada diri sendiri maupun orang lain. Meski begitu, Virgo sangat bisa diandalkan.";
+            }
+
+            else if (zodiac == "Libra") {
+                zodiacDesc = "Libra cinta kedamaian, adil, dan punya rasa estetika tinggi. Mereka suka harmoni dan sering menjadi penengah dalam konflik. Namun, sifatnya yang sulit mengambil keputusan bisa membuat mereka tampak ragu-ragu. Libra menawan dan sopan dalam berinteraksi.";
+            }
+
+            else if (zodiac == "Scorpio") {
+                zodiacDesc = "Scorpio intens, misterius, dan sangat bersemangat. Mereka setia tapi juga mudah cemburu dan sulit memaafkan pengkhianatan. Scorpio punya intuisi tajam dan tidak suka berpura-pura. Jika percaya, mereka akan berkorban sepenuh hati.";
+            }
+
+            else if (zodiac == "Sagittarius") {
+                zodiacDesc = "Sagittarius optimis, petualang, dan mencintai kebebasan. Mereka suka belajar hal baru dan berpikir filosofis. Namun, kejujurannya kadang terdengar kasar. Sagittarius selalu membawa energi positif dan sulit dikekang.";
+            }
+
+            else if (zodiac == "Capricorn") {
+                zodiacDesc = "Capricorn ambisius, disiplin, dan pekerja keras. Mereka fokus mengejar tujuan dan tidak mudah menyerah. Meski tampak kaku, mereka punya rasa humor halus dan kesetiaan tinggi. Capricorn menghargai waktu dan tanggung jawab.";
+            }
+
+            else if (zodiac == "Aquarius") {
+                zodiacDesc = "Aquarius unik, berpikiran maju, dan suka hal-hal inovatif. Mereka peduli pada kemanusiaan dan bebas dari aturan kaku. Kadang terlihat dingin karena lebih banyak berpikir logis daripada emosional. Aquarius selalu menghargai kebebasan pribadi.";
+            }
+
+            else if (zodiac == "Pisces") {
+                zodiacDesc = "Pisces lembut, imajinatif, dan penuh empati. Mereka mudah tersentuh dan punya intuisi kuat. Pisces suka membantu orang lain, tapi kadang terlalu terbawa perasaan. Dunia fantasi dan seni sering jadi tempat pelarian mereka dari realita.";
+            }
+
+            document.getElementById("zodiac-name").innerHTML = zodiacName + zodiac;
+            document.getElementById("zodiac-desc").innerHTML = zodiacDesc;
+
+        }
     </script>
 </body>
 </html>

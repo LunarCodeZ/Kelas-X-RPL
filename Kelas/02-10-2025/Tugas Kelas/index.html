@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi</title>
+
+    <style>
+        img {
+            width: 150px;
+            border-radius: 100%;
+            border: 2px solid black;
+            position: relative;
+            left: 290px;
+            margin: auto;
+        }
+
+        .profile {
+            padding: 20px 60px 0px 60px;
+            background-image: linear-gradient(to bottom right, orange, yellow);
+        }
+
+        .profile-text {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin: auto;
+            bottom: 120px;
+            margin-left: 460px;
+        }
+
+        .about-me {
+            font-size: 24px;
+            margin-left: 60px;
+            margin-right: 60px;
+            color: black;
+            text-indent: 30px;
+            text-align: justify;
+            position: relative;
+            bottom: 60px;
+        }
+    </style>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="navbar navbar-expand-lg bg-info">
+        <ul class="navbar-nav">
+            <li class="nav-item ms-3">
+                <a href="#" class="nav-link active">Profil</a>
+            </li>
+            <li class="nav-item ms-3">
+                <a href="riwayat_pendidikan.html" class="nav-link">Riwayat Pendidikan</a>
+            </li>
+            <li class="nav-item ms-3">
+                <a href="skill.html" class="nav-link">Skill</a>
+            </li>
+            <li class="nav-item ms-3">
+                <a href="hobi.html" class="nav-link">Hobi</a>
+            </li>
+        </ul>
+    </div>
+
+    <h1 style="text-align: center; margin-top: 20px;">
+        Profil
+    </h1>
+
+    <div class="profile container border border-primary">
+        <img src="../Bootstrap/images/profil-picture.png" alt="">
+        <div class="profile-text">
+            <h1>Erik Yanuar Putra</h1>
+            <h2>10 / X-RPL</h2>
+        </div>
+        <hr style="position: relative; bottom: 100px;" />
+        <p class="about-me">
+            " Saya Erik Yanuar Putra, Seorang siswa di sekolah SMKN 3 Buduran
+            Sidoarjo yang sangat menyukai dengan hal-hal yang berbau dengan
+            teknologi seperti pemrograman. Passion saya dalam pemrograman ialah
+            Back-end, hal itu dikarenakan saya sangat penasaran bagaimana
+            sistem bekerja di balik tampilannya. Selain itu, saya juga bercita-cita
+            untuk dapat menjadi seorang application ataupun game developer."
+        </p>
+    </div>
+
+    <br /><br />
+
+</body>
+
+</html>
