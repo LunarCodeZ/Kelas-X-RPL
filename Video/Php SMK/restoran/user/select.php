@@ -31,7 +31,7 @@ $no=1+$mulai;
             <th>ID User</th>
             <th>User</th>
             <th>Email</th>
-            <th>Password</th>
+            <th>Level</th>
             <th>Delete</th>
             <th>Status</th>
         </tr>
@@ -50,7 +50,7 @@ $no=1+$mulai;
             <td><?php echo $r['iduser'] ?></td>
             <td><?php echo $r['user'] ?></td>
             <td><?php echo $r['email'] ?></td>
-            <td><?php echo $r['password'] ?></td>
+            <td><?php echo $r['level'] ?></td>
             <td><a href="?f=user&m=delete&id=<?php echo $r['iduser']?>">Delete</a></td>
             <td><a href="?f=user&m=update&id=<?php echo $r['iduser']?>"><?php echo $status ?></a></td>
         </tr>

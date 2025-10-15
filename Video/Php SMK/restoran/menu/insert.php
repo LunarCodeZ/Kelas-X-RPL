@@ -60,7 +60,7 @@
         if (empty($gambar)) {
             echo "<h1>Gambar Kosong !</h1>";
         } else {
-            $sql = "INSERT INTO tblmenu VALUES ('',$idkategori,'$menu','$gambar',$harga)";
+            $sql = "INSERT INTO tblmenu2 VALUES ('',$idkategori,'$menu','$gambar',$harga)";
 
             move_uploaded_file($temp,'../upload/'.$gambar);
 

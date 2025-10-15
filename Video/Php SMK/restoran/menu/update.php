@@ -3,7 +3,7 @@
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
-        $sql = "SELECT * FROM tblmenu WHERE idmenu=$id";
+        $sql = "SELECT * FROM tblmenu2 WHERE idmenu=$id";
 
         $item = $db->getITEM($sql);
 
@@ -77,7 +77,7 @@
             move_uploaded_file($temp,'../upload/'.$gambar);
         }
 
-        $sql = "UPDATE tblmenu SET idkategori=$idkategori, menu='$menu',
+        $sql = "UPDATE tblmenu2 SET idkategori=$idkategori, menu='$menu',
         gambar='$gambar', harga=$harga WHERE idmenu=$id";
         
         $db->runSQL($sql);

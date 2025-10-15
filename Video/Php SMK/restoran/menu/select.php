@@ -41,7 +41,7 @@
 </div>
 
 <?php
-$jumlahdata = $db->rowCOUNT("SELECT idmenu FROM tblmenu $where");
+$jumlahdata = $db->rowCOUNT("SELECT idmenu FROM tblmenu2 $where");
 
 $banyak = 4;
 
@@ -54,7 +54,7 @@ if (isset($_GET['p'])) {
     $mulai = 0;
 }
 
-$sql = "SELECT * FROM tblmenu $where ORDER BY menu ASC LIMIT $mulai, $banyak";
+$sql = "SELECT * FROM tblmenu2 $where ORDER BY menu ASC LIMIT $mulai, $banyak";
 $row = $db->getALL($sql);
 
 $no=1+$mulai;
