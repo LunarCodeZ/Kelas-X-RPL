@@ -47,11 +47,13 @@
                 </div>
             </nav>
         </div>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-2">
-                @foreach ($kategoris as $kategori)
-                    <li class="list-group-item"><a href="{{ url('show/'.$kategori->idkategori) }}">{{ $kategori -> kategori }}</a></li>
-                @endforeach
+                <ul class="list-group">
+                    @foreach ($kategoris as $kategori)
+                        <li class="list-group-item"><a href="{{ url('show/'.$kategori->idkategori) }}">{{ $kategori -> kategori }}</a></li>
+                    @endforeach
+                </ul>
             </div>
 
             <div class="col-10">
