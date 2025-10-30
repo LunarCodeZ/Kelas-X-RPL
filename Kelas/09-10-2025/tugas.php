@@ -9,6 +9,25 @@ $sejarahSekolah = [
     "Sejak awal berdirinya sekolah, SMP Negeri 4 Sidoarjo berada di bawah aturan Dinas Pendidikan Kabupaten Sidoarjo dan memiliki status sebagai sekolah negeri. Dengan luas tanah mencapai sekitar 14 ribu meter persegi, sekolah ini memiliki fasilitas belajar yang memadai untuk menunjang kegiatan-kegiatan akademik maupun nonakademik seluruh siswa.",
     "Dalam perjalanannya, SMP Negeri 4 Sidoarjo telah berkembang menjadi salah satu sekolah favorit di wilayah Sidoarjo dengan berbagai prestasi yang diraih oleh siswa-siswinya. Berdasarkan data Kemendikbud, sekolah ini telah memperoleh akreditasi A sebagai bentuk pengakuan atas kualitas pendidikan dan manajemen sekolah yang baik."
 ];
+$visiMisiSekolah = [
+    "visi" => "BERIMTAQ, BERPRESTASI, DAN BERKARAKTER UNGGUL",
+    "misi" => [
+        "Melaksanakan dan mengembangkan pendidikan keagamaan guna membentuk peserta didik yang beriman dan bertaqwa kepada Tuhan Yang Maha Esa serta berakhlak mulia",
+        "Melaksanakan dan mengembangkan pendidikan keagamaan guna membentuk peserta didik yang hafal 10 surat bagi peserta didik muslim dan 5 ayat panjang bagi peserta didik non muslim",
+        "Melaksanakan dan mengembangkan kegiatan pembelajaran yang aktif, inovatif, kreatif, efektif dan menyenangkan sesuai dengan kebutuhan peserta didik",
+        "Melaksanakan dan mengembangkan pembelajaran berbasis karakter, literasi, dan numerasi",
+        "Melaksanakan dan mengembangkan pembelajaran projek penguatan profil pelajar Pancasila",
+        "Melaksanakan pembiasaan pola hidup bersih, sehat dan peduli lingkungan"
+    ]
+];
+$alamat = "Jl. Raya Suko, Suko, Kec. Sidoarjo, Kabupaten Sidoarjo, Jawa Timur 61224";
+$mataPelajaran = [
+    "MTK" => "Matematika",
+    "BIN" => "Bahasa Indonesia",
+    "BIG" => "Bahasa Inggris",
+    "BJW" => "Bahasa Jawa"
+];
+$mapelCount = 0;
 ?>
 
 
@@ -120,7 +139,7 @@ $sejarahSekolah = [
                 <div class="card-body">
                     <h5 class="card-title">Sejarah</h5>
                     <p class="card-text">Sejarah sekolah SMP Negeri 4 Sidoarjo</p>
-                    <button type="button" class="d-grid gap-2 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Baca sejarah</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sejarah">Baca sejarah</button>
                 </div>
             </div>
             <div class="card">
@@ -128,7 +147,7 @@ $sejarahSekolah = [
                 <div class="card-body">
                     <h5 class="card-title">Visi & Misi</h5>
                     <p class="card-text">Visi dan Misi sekolah SMP Negeri 4 Sidoarjo.</p>
-                    <a href="#" class="btn btn-primary">Baca visi dan misi</a>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#visimisi">Baca visi dan misi</a>
                 </div>
             </div>
             <div class="card">
@@ -136,7 +155,7 @@ $sejarahSekolah = [
                 <div class="card-body">
                     <h5 class="card-title">Alamat</h5>
                     <p class="card-text">Lokasi sekolah SMP Negeri 4 Sidoarjo.</p>
-                    <a href="#" class="btn btn-primary">Lihat alamat</a>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#alamat">Lihat alamat</a>
                 </div>
             </div>
             <div class="card">
@@ -144,7 +163,7 @@ $sejarahSekolah = [
                 <div class="card-body">
                     <h5 class="card-title">Data Akademik</h5>
                     <p class="card-text">Data-data akademik di sekolah SMP Negeri 4 Sidoarjo.</p>
-                    <a href="#" class="btn btn-primary">Lihat data</a>
+                    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dataakademik">Lihat data</a>
                 </div>
             </div>
             <div class="card">
@@ -165,9 +184,11 @@ $sejarahSekolah = [
             </div>
         </div>
 
+
+
         <!-- === Modals === -->
         <!-- Modal Sejarah -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="sejarah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -175,10 +196,10 @@ $sejarahSekolah = [
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="gambar/sejarah.jpg" alt="" style="width: 100%; height:150px;">
-                        <div class="card-title">
-                            <h3 style="position:absolute; bottom:570px; left:200px;">Sejarah</h3>
-                            <h3 style="position:absolute; bottom:530px; left:140px;">SMPN 4 Sidoarjo</h3>
+                        <img src="gambar/sejarah.jpg" alt="" style="width: 100%; height:150px; filter:brightness(50%)">
+                        <div class="modal-title">
+                            <h3 style="position:absolute; bottom:570px; left:200px; color:white;">Sejarah</h3>
+                            <h3 style="position:absolute; bottom:530px; left:140px; color:white;">SMPN 4 Sidoarjo</h3>
                         </div>
                         <p style="text-align: justify; margin:10px;">
                             <?php
@@ -194,6 +215,116 @@ $sejarahSekolah = [
                 </div>
             </div>
         </div>
+
+        <!-- Modal Visi dan Misi -->
+        <div class="modal fade" id="visimisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Visi & Misi Sekolah</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="gambar/visimisi.jpg" alt="" style="width: 100%; height:150px; filter:brightness(50%)">
+                    <div class="modal-title">
+                        <h3 style="position:absolute; bottom:540px; left:140px; color:white;">SMPN 4 Sidoarjo</h3>
+                    </div>
+                    <p style="text-align: justify; margin:10px;">
+                        <?php
+                        echo "<strong>Visi</strong><br>";
+                        echo $visiMisiSekolah["visi"].'<br><br>';
+                        echo "<strong>Misi:</strong><br><ol>";
+                        foreach ($visiMisiSekolah["misi"] as $visi) {
+                            echo "<li>$visi</li>";
+                        }
+                        echo '</ol>';
+                        ?>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Tutup</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Alamat -->
+        <div class="modal fade" id="alamat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Alamat Sekolah</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="gambar/alamat.jpg" alt="" style="width: 100%; height:150px; filter:brightness(50%)">
+                    <div class="modal-title">
+                        <h3 style="position:absolute; top:60px; left:200px; color:white">Alamat</h3>
+                        <h3 style="position:absolute; top:100px; left:140px; color:white">SMPN 4 Sidoarjo</h3>
+                    </div>
+                    <p style="text-align: justify; margin:10px;">
+                        <strong>
+                            <?php
+                                echo $alamat;
+                            ?>
+                        </strong>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Tutup</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Data Akademik -->
+        <div class="modal fade" id="dataakademik" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Data Akademik Sekolah</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="gambar/akademik.jpg" alt="" style="width: 100%; height:150px; filter:brightness(50%)">
+                    <div class="modal-title">
+                        <h3 style="position:absolute; bottom:600px; left:160px; color:white">Data Akademik</h3>
+                        <h3 style="position:absolute; bottom:560px; left:140px; color:white">SMPN 4 Sidoarjo</h3>
+                    </div>
+                    <p style="margin:10px; text-align:center">
+                        <strong>
+                            Daftar Mata Pelajaran
+                        </strong>
+                        <br />
+                    </p>
+                    <table class="table table-bordered w-100" style="text-align: center;">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Mapel</th>
+                                <th scope="col">Deskripsi Mapel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td></td>
+                            </tr>
+                            <?php foreach ($mataPelajaran as $key => $value) {
+                                # code...
+                            } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Tutup</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
         <br><br><br><br><br>
 

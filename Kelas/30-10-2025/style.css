@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.container > div {
+    margin: auto;
+    width: 25rem;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
