@@ -198,7 +198,7 @@
                 if ($tanggal > 0 && $tanggal < 21) {
                     return "Zodiak anda: Gemini";
                 } else {
-                    echo "Zodiak anda: Cancer";
+                    return "Zodiak anda: Cancer";
                 }
             }
 
@@ -280,13 +280,13 @@
                 if ($tanggal > 0 && $tanggal < 21) {
                     return "Pisces lembut, imajinatif, dan penuh empati. Mereka mudah tersentuh dan punya intuisi kuat. Pisces suka membantu orang lain, tapi kadang terlalu terbawa perasaan. Dunia fantasi dan seni sering jadi tempat pelarian mereka dari realita.";
                 } else {
-                    "Anda berjiwa pemimpin, penuh semangat, dan sukaAries berjiwa pemimpin, penuh semangat, dan suka tantangan. Mereka spontan, energik, dan cepat mengambil keputusan, tapi terkadang terlalu impulsif dan mudah marah. Meski keras kepala, Aries punya keberanian besar dan selalu ingin jadi yang pertama dalam segala hal.";
+                    return "Anda berjiwa pemimpin, penuh semangat, dan sukaAries berjiwa pemimpin, penuh semangat, dan suka tantangan. Mereka spontan, energik, dan cepat mengambil keputusan, tapi terkadang terlalu impulsif dan mudah marah. Meski keras kepala, Aries punya keberanian besar dan selalu ingin jadi yang pertama dalam segala hal.";
                 }
             }
 
             if ($bulan == 4) {
                 if ($tanggal > 0 && $tanggal < 20) {
-                    "Anda berjiwa pemimpin, penuh semangat, dan sukaAries berjiwa pemimpin, penuh semangat, dan suka tantangan. Mereka spontan, energik, dan cepat mengambil keputusan, tapi terkadang terlalu impulsif dan mudah marah. Meski keras kepala, Aries punya keberanian besar dan selalu ingin jadi yang pertama dalam segala hal.";
+                    return "Anda berjiwa pemimpin, penuh semangat, dan sukaAries berjiwa pemimpin, penuh semangat, dan suka tantangan. Mereka spontan, energik, dan cepat mengambil keputusan, tapi terkadang terlalu impulsif dan mudah marah. Meski keras kepala, Aries punya keberanian besar dan selalu ingin jadi yang pertama dalam segala hal.";
                 } else {
                     return "Taurus dikenal sabar, setia, dan pekerja keras. Mereka menyukai kenyamanan, keindahan, dan kestabilan hidup. Namun, sifat keras kepala dan sulit berubah bisa jadi kekurangannya. Taurus sangat bisa dipercaya dan selalu menjaga komitmen.";
                 }
@@ -304,7 +304,7 @@
                 if ($tanggal > 0 && $tanggal < 21) {
                     return "Gemini cerdas, komunikatif, dan mudah beradaptasi. Mereka suka belajar hal baru dan pandai bergaul, tapi kadang mudah bosan dan sulit fokus. Gemini punya dua sisi kepribadian — menyenangkan sekaligus penuh misteri.";
                 } else {
-                    echo "Cancer lembut, penyayang, dan sangat peduli dengan keluarga. Mereka sensitif dan intuitif, tapi mudah tersinggung jika merasa tidak dihargai. Cancer juga setia dan suka melindungi orang yang mereka cintai.";
+                    return "Cancer lembut, penyayang, dan sangat peduli dengan keluarga. Mereka sensitif dan intuitif, tapi mudah tersinggung jika merasa tidak dihargai. Cancer juga setia dan suka melindungi orang yang mereka cintai.";
                 }
             }
 
@@ -369,7 +369,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(19, 19, 19);
+            color: white;
+        }
+
+        .container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .container > div {
+            margin: auto;
+            width: 25rem;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    </style>
 </head>
 <body>
    <h1 style="text-align: center;">Belajar PHP Function</h1>
@@ -450,7 +474,7 @@
                 <fieldset>
                     <legend>Output</legend>
                     <p style="text-align: center;">
-                        <?php echo $hasilZodiak ?>
+                        <?php echo $hasilZodiak.'<br>'.$keterangan ?>
                     </p>
                 </fieldset>
 
