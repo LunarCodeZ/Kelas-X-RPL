@@ -11,7 +11,6 @@
 
     function zodiak($bulan, $tanggal) {
         if ($tanggal > 0 && $tanggal < 32 && $bulan > 0 && $bulan < 13) {
-            // echo "= = = = = = = = = = = = = = = = = = = = = =<br>";
             if ($bulan == 1) {
                 if ($tanggal > 0 && $tanggal < 20) {
                     return "Zodiak anda: Capricorn";
@@ -110,7 +109,6 @@
                     return "Zodiak anda: Capricorn";
                 }
             }
-            // echo "<br>= = = = = = = = = = = = = = = = = = = = = =";
         } else {
             return "tanggal atau bulan salah !";
         }
