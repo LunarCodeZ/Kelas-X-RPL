@@ -5,7 +5,12 @@
         <div class="col-6">
             <form action="{{ url('admin/kategori') }}" method="post">
                 @csrf
-
+                <select class="form-select" name="idkategori" onchange="this.form.submit()">
+                    <option value="">-- Pilih Kategori --</option>
+                        @foreach ($kategoris as $kategori)
+                            <option value="{{ $kategori->idkategori }}">{{ $kategori->kategori }}</option>
+                        @endforeach
+                </select>
                 
 
                 <div class="mt-2">
