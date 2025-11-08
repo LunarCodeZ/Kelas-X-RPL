@@ -1,5 +1,7 @@
 <?php
 
+// 'Web' buat menerima input dari file blade.php lain
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
