@@ -9,6 +9,8 @@ class AuthController extends Controller
 {
     public function index()
     {
+        // Tes level admin
+
         if ($user = Auth::user()) {
             if ($user->level == 'admin') {
                 return redirect('admin/user');
