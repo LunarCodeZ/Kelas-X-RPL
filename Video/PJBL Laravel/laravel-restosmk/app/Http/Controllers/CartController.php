@@ -96,7 +96,7 @@ class CartController extends Controller
                     'hargajual'=>$value['harga']
                 ];
 
-                $total = $total - ($value['jumlah']*$value['harga']);
+                $total += $total + ($value['jumlah']*$value['harga']);
                 OrderDetail::create($data);
             }
         }
@@ -108,7 +108,8 @@ class CartController extends Controller
             'tglorder' => $tanggal,
             'total' => $total,
             'bayar' => 0,
-            'kembali' => 0
+            'kembali' => 0,
+            'status' => 0
         ];
 
         Order::create($data);

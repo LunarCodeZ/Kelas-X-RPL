@@ -106,6 +106,7 @@ class MenuController extends Controller
             $namagambar = $request->file('gambar')->getClientOriginalName();
             $request->gambar->move(public_path('gambar'),$namagambar);
             
+            
             $data = $request->validate([
                 'gambar'=>'required|max:2048',
                 'menu'=>'required',
