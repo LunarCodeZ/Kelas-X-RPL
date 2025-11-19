@@ -24,6 +24,10 @@ int start() {
     cout << "Masukkan tinggi segitiga: ";
     cin >> tinggi;
 
+    // cout << "\nMasukkan batas: ";
+    // cin >> batas;
+    // batas_container = batas;
+
     cout << "\nKetikkan simbol (1 karakter): ";
     cin >> simbol;
 
@@ -44,6 +48,7 @@ int start() {
     if (model > 0 && model < 5) {
         
         cout << endl << "Tinggi segitiga: " << tinggi << endl;
+        // cout << "Batas: " << batas << endl;
         cout << "Simbol digunakan: " << simbol << endl;
         cout << "Model segitiga: " << pilihan_model[model] << endl;
         cout << "Hasil: " << "\n\n";
@@ -175,6 +180,19 @@ int start() {
             cout << "===";
             cout << endl;
 
+            // for (int i = tinggi; i > 0; i--) {
+            //     for (int j = 1; j <= i; j++) {
+            //         cout << "| " << simbol;
+            //         while (batas > 0) {
+            //             cout << " ";
+            //             batas--;
+            //         }
+            //         batas = batas_container;
+            //     }
+
+            //     cout << endl;
+            // }
+
             cout << "\n\n\n";
             start();
 
@@ -288,7 +306,7 @@ int start() {
 
 int main() {
 
-    cout << endl << "\t\t\t Hello :) \nProgram ini dibuat oleh: LunarCodeZ" << endl << endl;
+    cout << endl << "Hello :), \nProgram ini dibuat oleh: LunarCodeZ" << endl << endl;
     start();
 
     return 0;
