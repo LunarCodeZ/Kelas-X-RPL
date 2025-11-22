@@ -13,10 +13,10 @@ int start() {
     int tinggi, batas, batas_container , counter = 0, model;
     char simbol;
     string pilihan_model[6] ={
-        "Segitiga Kiri Atas Ke Bawah",
-        "Segitiga Kiri Bawah Ke Atas",
-        "Segitiga Kanan Atas Ke Bawah",
-        "Segitiga Kanan Bawah Ke Atas",
+        "segitiga siku-siku kiri Atas Ke Bawah",
+        "segitiga siku-siku kiri Bawah Ke Atas",
+        "segitiga siku-siku kanan Atas Ke Bawah",
+        "segitiga siku-siku kanan Bawah Ke Atas",
         "Segitiga Sama Kaki",
         "Segitiga Sama Kaki Terbalik"
     };
@@ -50,7 +50,7 @@ int start() {
        
         if (model == 1) {
 
-            // Jika model "segitiga kiri atas ke bawah"
+            // Jika model "segitiga siku-siku kiri atas ke bawah"
             border_1 = tinggi - 1;
 
             // For loop border
@@ -121,7 +121,7 @@ int start() {
 
         } else if (model == 2) {
 
-            // Jika model "segitiga kiri bawah ke atas"
+            // Jika model "segitiga siku-siku kiri bawah ke atas"
             border_2 = 0;
 
             // For loop border
@@ -181,7 +181,7 @@ int start() {
 
         } else if (model == 3) {
 
-            // Jika model "segitiga kanan atas ke bawah"
+            // Jika model "segitiga siku-siku kanan atas ke bawah"
             // For loop border
             for (int a = 1; a <= tinggi; a++) {
                 cout << "=";
@@ -230,7 +230,7 @@ int start() {
             
         } else {
 
-            // Jika model "segitiga kanan bawah ke atas"
+            // Jika model "segitiga siku-siku kanan bawah ke atas"
             // For loop border
             for (int a = tinggi; a > 0; a--) {
 

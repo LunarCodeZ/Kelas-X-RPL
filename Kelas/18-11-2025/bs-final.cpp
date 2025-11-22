@@ -13,20 +13,16 @@ int start() {
     int tinggi, batas, batas_container , counter = 0, model;
     char simbol;
     string pilihan_model[6] ={
-        "segitiga siku-siku kiri Atas Ke Bawah",
-        "segitiga siku-siku kiri Bawah Ke Atas",
-        "segitiga siku-siku kanan Atas Ke Bawah",
-        "segitiga siku-siku kanan Bawah Ke Atas",
-        "segitiga sama kaki",
-        "segitiga sama kaki Terbalik"
+        "Segitiga SIku-siku Kiri Atas Ke Bawah",
+        "Segitiga SIku-siku Kiri Bawah Ke Atas",
+        "Segitiga SIku-siku Kanan Atas Ke Bawah",
+        "Segitiga SIku-siku Kanan Bawah Ke Atas",
+        "Segitiga Sama Kaki",
+        "Segitiga Sama Kaki Terbalik"
     };
 
     cout << "Masukkan tinggi segitiga: ";
     cin >> tinggi;
-
-    // cout << "\nMasukkan batas: ";
-    // cin >> batas;
-    // batas_container = batas;
 
     cout << "\nKetikkan simbol (1 karakter): ";
     cin >> simbol;
@@ -48,9 +44,8 @@ int start() {
     if (model > 0 && model < 7) {
         
         cout << endl << "Tinggi segitiga: " << tinggi << endl;
-        // cout << "Batas: " << batas << endl;
         cout << "Simbol digunakan: " << simbol << endl;
-        cout << "Model segitiga: " << pilihan_model[model] << endl;
+        cout << "Model segitiga: " << pilihan_model[model - 1] << endl;
         cout << "Hasil: " << "\n\n";
        
         if (model == 1) {
@@ -96,16 +91,6 @@ int start() {
                 cout << endl;
             }
 
-            // * --> 15
-            // * * --> 12
-            // * * * --> 6
-
-            // * --> 12
-            // * * --> 9
-            // * * * --> 6
-            // * * * * --> 3
-            // * * * * *
-
 
             // For border penutup
             for (int a = 1; a <= tinggi; a++) {
@@ -137,8 +122,7 @@ int start() {
                 }
                 
             }
-            cout << "===";
-            cout << endl;
+            cout << "===" << endl;
 
 
             // For loop pola
@@ -162,12 +146,6 @@ int start() {
                 cout << endl;
             }
 
-            // * * * * *
-            // * * * * --> 3
-            // * * *--> 6
-            // * * --> 9
-            // * --> 12
-
 
             // For border penutup
             for (int a = tinggi; a > 0; a--) {
@@ -177,21 +155,7 @@ int start() {
                 }
                 
             }
-            cout << "===";
-            cout << endl;
-
-            // for (int i = tinggi; i > 0; i--) {
-            //     for (int j = 1; j <= i; j++) {
-            //         cout << "| " << simbol;
-            //         while (batas > 0) {
-            //             cout << " ";
-            //             batas--;
-            //         }
-            //         batas = batas_container;
-            //     }
-
-            //     cout << endl;
-            // }
+            cout << "===" << endl;
 
             cout << "\n\n\n";
             start();
@@ -225,8 +189,7 @@ int start() {
                     cout << simbol << "  ";
                 }
 
-                cout << "|";
-                cout << endl;
+                cout << "|" << endl;
             }
 
 
@@ -257,8 +220,7 @@ int start() {
                 }
                 
             }
-            cout << "===";
-            cout << endl;
+            cout << "===" << endl;
 
 
             // For loop pola
@@ -274,8 +236,7 @@ int start() {
                     cout << simbol << "  ";
                 }
 
-                cout << "|";
-                cout << endl;
+                cout << "|" << endl;
             }
 
             
@@ -287,8 +248,7 @@ int start() {
                 }
                 
             }
-            cout << "===";
-            cout << endl;
+            cout << "===" << endl;
 
             cout << "\n\n\n";
             start();
@@ -304,8 +264,7 @@ int start() {
                 }
                 
             }
-            cout << "===========";
-            cout << endl;
+            cout << "===========" << endl;
 
 
             // For loop pola
@@ -323,8 +282,7 @@ int start() {
                     cout << " ";
                 }
 
-                cout << "   |";
-                cout << endl;
+                cout << "   |" << endl;
             }
 
 
@@ -336,8 +294,10 @@ int start() {
                 }
                 
             }
-            cout << "===========";
-            cout << endl;
+            cout << "===========" << endl;
+            
+            cout << "\n\n\n";
+            start();
 
         } else {
 
@@ -350,8 +310,7 @@ int start() {
                 }
                 
             }
-            cout << "===========";
-            cout << endl;
+            cout << "===========" << endl;
 
 
             // For loop pola
@@ -369,8 +328,7 @@ int start() {
                     cout << " ";
                 }
 
-                cout << "    |";
-                cout << endl;
+                cout << "    |" << endl;
             }
 
 
@@ -382,8 +340,10 @@ int start() {
                 }
                 
             }
-            cout << "===========";
-            cout << endl;
+            cout << "===========" << endl;
+
+            cout << "\n\n\n";
+            start();
         }
 
     } else {
