@@ -5,7 +5,7 @@
     $sql = "SELECT * FROM tblpelanggan";
     $result = mysqli_query($con, $sql);
 
-    print_r($result);
+    // print_r($result);
 
     if (mysqli_num_rows($result) > 0) {
         $data = array();

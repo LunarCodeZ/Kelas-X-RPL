@@ -21,24 +21,28 @@
             <h2>Input Data Pelanggan</h2>
           </div>
           <div class="row">
+            <div id="msg">
+
+            </div>
             <form>
               <div class="mb-3">
+                <input type="text" class="form-control" id="id" aria-describedby="emailHelp" required>
                 <label for="exampleInputEmail1" class="form-label">Pelanggan</label>
                 <input type="text" class="form-control" id="pelanggan" aria-describedby="emailHelp" required>
                 <div id="emailHelp" class="form-text">Harus di isi</div>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamat">
+                <input type="text" class="form-control" id="alamat" required>
                 <div id="emailHelp" class="form-text">Harus di isi</div>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Telp</label>
-                <input type="text" class="form-control" id="telp">
+                <input type="text" class="form-control" id="telp" required>
                 <div id="emailHelp" class="form-text">Harus di isi</div>
               </div>
               
-              <button type="submit" id="submit" class="btn btn-success">Submit</button>
+              <button type="submit" id="submit" class="btn btn-success">Simpan</button>
           </form>
           </div>
         </div>
@@ -55,6 +59,7 @@
                   <th scope="col">Pelanggan</th>
                   <th scope="col">Alamat</th>
                   <th scope="col">Telp</th>
+                  <th scope="col">Hapus</th>
                 </tr>
               </thead>
               <tbody id="isidata">
