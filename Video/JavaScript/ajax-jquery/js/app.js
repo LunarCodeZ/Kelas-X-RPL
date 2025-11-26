@@ -1,3 +1,5 @@
+const { cache } = require("react");
+
 $(document).ready(function () {
     let id = "";
     let pelanggan = "";
@@ -24,15 +26,63 @@ $(document).ready(function () {
 
     });
 
+    $("#btn-tambah").click(function (e) { 
+        e.preventDefault();
+        
+        $("#titel").html("<p>Tambah Data</p>");
+
+        $("#id").val("");
+        $("#pelanggan").val("");
+        $("#alamat").val("");
+        $("#telp").val("");
+
+    });
+
+
+
     $("tbody").on("click", ".btn-del", function () {
         let id = $(this).attr("data-id");
-        deleteData(id);
+        
+        if (confirm("Yakin Akan Menghapus ?")) {
+            deleteData(id);
+        }
     });
+
+    $("tbody").on("click", ".btn-ubah", function () {
+        let id = $(this).attr("data-id");
+        $("#titel").html("<p>Ubah Data</p>");
+        console.log(id);
+    });
+
+
+
+    function selectUpdate(id) {
+        let idpelanggan = {
+            idpelanggan : id
+        };
+
+        $.ajax({
+            type: "post",
+            url: "php/selectupdate.php",
+            cache: false,
+            data: JSON.stringify(idpelanggan),
+            // dataType: "dataType",
+            success: function (response) {
+                let data = JSON.parse(response);
+
+                $("#id").val(data.idpelanggan);
+                $("#pelanggan").val(data.pelanggan);
+                $("#alamat").val(data.alamat);
+                $("#telp").val(data.telp);
+            }
+        });
+    }
 
     function selectData() {
         $.ajax({
             type: "get",
             url: "php/select.php",
+            cache: false,
             dataType: "json",
             success: function (response) {
                 let out = "";
@@ -44,6 +94,7 @@ $(document).ready(function () {
                      <td>${val.alamat}</td>
                      <td>${val.telp}</td>
                      <td><button type="button" class="btn btn-danger btn-del" data-id=${val.idpelanggan}>Delete</button></td>
+                     <td><button type="button" class="btn btn-info btn-ubah" data-id=${val.idpelanggan}>Update</button></td>
                      </tr>`;
                 });
 
@@ -99,7 +150,26 @@ $(document).ready(function () {
     }
 
     function updateData() {
-        alert("update");
+        let dataPelanggan = {
+            idpelanggan : id,
+            pelanggan : pelanggan,
+            al : alamat,
+            telp : telp
+        };
+
+        $.ajax({
+            type: "post",
+            url: "php/update.php",
+            cache: false,
+            data: JSON.stringify(dataPelanggan),
+            // dataType: "dataType",
+            success: function (response) {
+                let out = `<p>${response}</p>`;
+                $("#msg").html(out);
+            }
+        });
+
+        selectData();
     }
 
     selectData();

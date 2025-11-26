@@ -2,18 +2,18 @@
 
     require_once "koneksi.php";
 
-    $sql = "SELECT * FROM tblpelanggan";
+    $data = stripslashes(file_get_contents("php://input"));
+    $idpelanggan = json_decode($data,true);
+
+    $idpelanggan = $idpelanggan['idpelanggan'];
+
+    $sql = "SELECT * FROM tblpelanggan WHERE idpelanggan=$idpelanggan";
     $result = mysqli_query($con, $sql);
 
-    // print_r($result);
+    $row = mysqli_fetch_assoc($result);
 
-    if (mysqli_num_rows($result) > 0) {
-        $data = array();
-        while ($row = mysqli_fetch_assoc($result)) {
-            $data[] = $row;
-        }
-    }
+    
 
-    echo json_encode($data);
+    echo json_encode($row);
 
 ?>
