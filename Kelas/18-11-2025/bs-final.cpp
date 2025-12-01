@@ -1,3 +1,5 @@
+// LunarCodeZ
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -230,6 +232,7 @@ int start() {
                     cout << "   ";
                 }
 
+                // LunarCodeZ
                 // cout << "*";
 
                 for (int k = tinggi; k > i; k--) {
@@ -357,6 +360,7 @@ int start() {
 
 int main() {
 
+    // LunarCodeZ
     cout << endl << "      Selamat Welcome :) \nProgram ini dibuat oleh: Erik" << endl << endl;
     start();
 
