@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: cursive;
+            color: black;
+        }
+
+        nav {
+            background-image: linear-gradient(to top, rgb(255, 77, 0), rgb(255, 55, 0));
+            padding: 10px 1cm;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+        }
+
+        #navtop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #navtop-left {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+        }
+
+        #navtop-left > a {
+            border-right: 1.2px solid white;
+            padding-right: 6px;
+        }
+
+        #navtop-right {
+            display: flex;
+            flex-direction: row;   
+            gap: 50px;
+        }
+
+        #navtop-right-1 {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        #navtop-right-1 > div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #navtop-right-2 {
+            display: flex;
+            flex-direction: row;
+            font-weight: 700;
+        }
+
+        #navbottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        input {
+            width: 18cm;
+            padding: 10px 30px;
+        }
+
+        button {
+            height: 38px;
+            background-color: orange;
+            border: 1px solid white;
+        }
+
+        #content {
+            padding: 30px 60px;
+        }
+
+        #promo {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .small-promo {
+            width: 100%;
+            height: 150px;
+        }
+
+        .big-promo {
+            width: 100%;
+            height: 305px;
+        }
+
+        #category-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+
+        .categories {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .category {
+            border: 1px solid rgb(50, 50, 50);
+            border-radius: 30%;
+            width: 35px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div id="navtop">
+            <div id="navtop-left">
+                <a href="">Seller Center</a>
+                <a href="">Mulai Berjualan</a>
+                <a href="">Download</a>
+                <a href="" style="border: none;">Ikuti Kami</a>
+            </div>
+            <div id="navtop-right">
+                <div id="navtop-right-1">
+                    <div>
+                        <div></div>
+                        <a href="">Notifikasi</a>
+                    </div>
+                    <div>
+                        <div></div>
+                        <a href="">Bantuan</a>
+                    </div>
+                    <div>
+                        <a href="">Bahasa</a>
+                    </div>
+                </div>
+                <div id="navtop-right-2">
+                    <div style="border-right: 1.2px solid white; padding-right: 7px;">
+                        <a href="">Daftar</a>
+                    </div>
+                    <div style="margin-left: 7px;">
+                        <a href="">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbottom">
+            <div>
+                Shopee
+            </div>
+            <div style="display: flex;">
+                <div>
+                    <input type="text" placeholder="Daftar & Dapatkan Voucher Gratis">
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <a href="">Laptop</a>
+                        <a href="">Handphone</a>
+                        <a href="">Peralatan Dapur</a>
+                        <a href="">Alat Makan</a>
+                        <a href="">Keperluan Sekolah</a>
+                        <a href="">Buku</a>
+                    </div>
+                </div>
+                <button>Search</button>
+            </div>
+            <div>
+                Cart
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="content">
+        <section id="promo">
+            <div id="big-promos">
+                <img src="img/python-wallpaper.png" alt="" class="big-promo">
+            </div>
+            <div id="small-promos">
+                <img src="img/kotlin-wallpeper.jpg" alt="" class="small-promo">
+                <img src="img/java-wallpaper.png" alt="" class="small-promo">
+            </div>
+        </section>
+
+        <section id="category-container">
+            <div class="categories">
+                <div class="category"></div>
+                <span>Shopee Pilih Lokal</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Shopee Mall</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Pulsa, Tagihan, dan Tiket</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Flash Sale</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Shopee Supermarket</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Dikelola Shopee</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>FitCheck Diskon 25%</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Gratis Ongkir dan Voucher</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Shopee Barokah</span>
+            </div>
+            <div class="categories">
+                <div class="category"></div>
+                <span>Semua Promo</span>
+            </div>
+        </section>
+    </section>
+
+    <base href="#">
+</body>
+</html>
