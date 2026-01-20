@@ -21,6 +21,7 @@ public class InputOutput {
         
         
         // > Output: Menerima dan menampilkan nilai yang dimasukkan
+        System.out.println("\n > Output: Menerima dan menampilkan nilai yang dimasukkan");
         String nama = inputNama.nextLine();
         System.out.println("Halo, " + nama);
     }
