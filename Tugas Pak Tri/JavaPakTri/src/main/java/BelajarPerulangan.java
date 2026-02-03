@@ -46,16 +46,16 @@ public class BelajarPerulangan {
         
         // === Segitiga Siku-siku Sudut Kiri Bawah: Dinamis ===
         System.out.println("=== Segitiga Siku-siku Sudut Kiri Bawah: Dinamis ===");
-//        Scanner inputSegitiga = new Scanner(System.in);
-//        System.out.print("Masukkan tinggi segitiga: ");
-//        int tinggiSegitiga1 = inputSegitiga.nextInt();
-//        for (int a = 1; a <= tinggiSegitiga1; a++) {
-//            System.out.print("* ");
-//            for (int b = 1; b < a; b++) {
-//                System.out.print("* ");
-//            }
-//            System.out.print("\n");
-//        }
+        Scanner inputSegitiga = new Scanner(System.in);
+        System.out.print("Masukkan tinggi segitiga: ");
+        int tinggiSegitiga1 = inputSegitiga.nextInt();
+        for (int a = 1; a <= tinggiSegitiga1; a++) {
+            System.out.print("* ");
+            for (int b = 1; b < a; b++) {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
         System.out.println("\n\n");
         
         
@@ -73,6 +73,14 @@ public class BelajarPerulangan {
         
         // === Segitiga Siku-siku Sudut Kiri Atas: Dinamis ===
         System.out.println("=== Segitiga Siku-siku Sudut Kiri Atas: Dinamis ===");
+        System.out.print("Masukkan tinggi segitiga: ");
+        int tinggiSegitiga2 = inputSegitiga.nextInt();
+        for (int a = tinggiSegitiga2; a >= 1; a--) {
+            for (int b = a; b >= 1; b--) {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
         System.out.println("\n\n");
         
         
@@ -80,7 +88,7 @@ public class BelajarPerulangan {
         System.out.println("=== Segitiga Siku-siku Sudut Kanan Atas: Statis ===");
         int tinggiC = 5;
         for (int a = tinggiC; a >= 1; a--) {
-            for (int b = 5 - a; b >= 1; b--) {
+            for (int b = tinggiC - a; b >= 1; b--) {
                 System.out.print("  ");
             }
             for (int c = a; c >= 1; c--) {
@@ -93,16 +101,17 @@ public class BelajarPerulangan {
         
         // === Segitiga Siku-siku Sudut Kanan Atas: Dinamis ===
         System.out.println("=== Segitiga Siku-siku Sudut Kanan Atas: Dinamis ===");
-        System.out.println("\n\n");
-        
-        
-        // === Segitiga Siku-siku Sudut Kanan Bawah: Statis ===
-        System.out.println("=== Segitiga Siku-siku Sudut Kanan Bawah: Statis ===");
-        System.out.println("\n\n");
-        
-        
-        // === Segitiga Siku-siku Sudut Kanan Bawah: Dinamis ===
-        System.out.println("=== Segitiga Siku-siku Sudut Kanan Bawah: Dinamis ===");
+        System.out.print("Masukkan tinggi segitiga: ");
+        int tinggiSegitiga3 = inputSegitiga.nextInt();
+        for (int a = tinggiSegitiga3; a >= 1; a--) {
+            for (int b = tinggiSegitiga3 - a; b >= 1; b--) {
+                System.out.print("  ");
+            }
+            for (int c = a; c >= 1; c--) {
+                System.out.print("* ");
+            }
+            System.out.print("\n");
+        }
     }
     
 }
