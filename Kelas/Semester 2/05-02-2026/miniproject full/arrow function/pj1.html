@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kuadrat</title>
+</head>
+<body>
+    <input type="number" id="n">
+    <button onclick="KUADRAT()">Kuadrat</button>
+    <p id="hasil"></p>
+
+    <script>
+        const KUADRAT = () => document.getElementById("hasil").innerHTML = document.getElementById("n").value * document.getElementById("n").value;
+    </script>
+</body>
+</html>

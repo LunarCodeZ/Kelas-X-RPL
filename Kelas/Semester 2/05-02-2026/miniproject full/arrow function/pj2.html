@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Pajak</title>
+</head>
+<body>
+    <input type="number" id="harga">
+    <button onclick="PAJAK()">Pajak</button>
+    <p id="hasil"></p>
+
+    <script>
+        const PAJAK = () => document.getElementById("hasil").innerHTML = document.getElementById("harga").value * 0.1;
+    </script>
+</body>
+</html>

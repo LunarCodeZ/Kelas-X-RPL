@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+</head>
+<body>
+    <input type="number" id="c">
+    <button onclick="konversi()">Konversi</button>
+    <p id="hasil"></p>
+
+    <script>
+        function konversi() {
+            document.getElementById("hasil").innerHTML = (document.getElementById("c").value * 9/5) + 32;
+        }
+    </script>
+</body>
+</html>

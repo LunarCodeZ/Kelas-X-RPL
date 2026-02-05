@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Cek Genap/Ganjil</title>
+</head>
+<body>
+    <input type="number" id="n">
+    <p id="hasil"></p>
+    <script>
+        const CEK = function() {
+            document.getElementById("hasil").innerHTML = document.getElementById("n").value % 2 == 0 ? 'Genap' : 'Ganjil';
+        }
+    </script>
+</body>
+</html>

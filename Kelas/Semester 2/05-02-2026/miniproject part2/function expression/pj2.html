@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Persegi Panjang</title>
+</head>
+<body>
+    <input type="number" id="p">
+    <input type="number" id="l">
+    <button onclick="LUAS()">Cari Luas</button>
+    <p id="hasil"></p>
+
+    <script>
+        const LUAS = function() {
+            document.getElementById("hasil").innerHTML = document.getElementById("p").value * document.getElementById("l").value;
+        }
+    </script>
+</body>
+</html>

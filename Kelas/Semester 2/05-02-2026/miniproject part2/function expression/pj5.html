@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+</head>
+<body>
+    <input type="number" id="nilai">
+    <button onclick="GRADE()">Tampilkan Grade</button>
+    <p id="hasil"></p>
+
+    <script>
+        const GRADE = function () {
+            let n = document.getElementById("nilai").value;
+            let hasil = document.getElementById("hasil");
+            if (n >= 85) hasil.innerHTML = 'A';
+            else if (n >= 75) hasil.innerHTML = 'B';
+            else hasil.innerHTML = 'C';
+        }
+    </script>
+</body>
+</html>
