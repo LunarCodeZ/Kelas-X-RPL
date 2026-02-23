@@ -27,6 +27,17 @@ public class SepuluhRpl {
         }
         System.out.println("");
         
+        
+        
+        // === SiswaRpl === 
+        System.out.println("=== Procedure: SiswaRpl ===");
+        SiswaRpl siswa2 = new SiswaRpl();
+        siswa2.hobiSiswa();
+        
+        System.out.println("\n=== Function: SiswaRpl ===");
+        siswa2.gantiHobi();
+        siswa2.hobiSiswa();
+        
         // Dinamis
 //        MuridRpl siswa2 = new MuridRpl();
 //        Scanner input = new Scanner(System.in);
