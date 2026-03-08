@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+  /* background-color: rgb(6, 6, 6); */
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(6, 6, 6), rgb(4, 28, 37), rgb(6, 6, 6));
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 2em 3.2em;
+}
+
+header > img {
+  width: 5em;
+  height: 5em;
+}
+
+section {
+  margin: 2em 3.2em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 800;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+a {
+  text-decoration-line: none;
+  color: whitesmoke;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 2em 5em;
+  text-align: center;
+}
+
+footer > div {
+  color: rgb(128, 128, 128);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2.5em;
+}
+
+footer > p {
+  font-family: cursive;
+  color: rgb(75, 75, 75);
+}
