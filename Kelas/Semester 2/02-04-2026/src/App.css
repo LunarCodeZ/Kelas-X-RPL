@@ -1,3 +1,9 @@
+:root {
+  --border: 1px solid rgb(90, 90, 90);
+  --border-radius: 5%;
+}
+
+
 /* Navbar */
 #navbar {
   display: flex;
@@ -39,28 +45,97 @@
 #menu {
   display: grid;
   gap: 5em 8em;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / repeat(2, 1fr);
   justify-content: space-between;
-  padding: 1.5cm 10em;
+  padding: 1.5cm 5em;
 }
 
-#menu > div {
+#menu > a {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(90, 90, 90);
-  border-radius: 5%;
+  border: var(--border);
+  border-radius: var(--border-radius);
   padding: 0.1cm;
   cursor: pointer;
+  transition: 0.4s;
 }
 
-#menu > div > div {
+#menu > a:hover {
+  transform: translateY(-20px);
+  border: 1px solid cyan;
+  box-shadow: 0 0 20px 0 lightblue;
+}
+
+#menu > a > div {
   padding: 0 0.3cm;
 }
 
-#menu > div > img {
+#menu > a > img {
   width: 100%;
   height: 55%;
   border-radius: 5% 5% 0 0;
+}
+
+
+/* Profil */
+.profil-container {
+  display: grid;
+  grid-template: 1fr / repeat(2, 1fr);
+  gap: 3em;
+}
+
+.profil-container > div {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding: 0.3cm 0;
+}
+
+#slogan {
+  grid-column: span 2;
+  font-size: 0.55cm;
+  color: rgb(155, 155, 155);
+}
+
+#overview > p {
+  margin: 0.5cm 1cm;
+  text-align: justify;
+  text-indent: 1cm;
+}
+
+#overview > p > a {
+  color: cyan;
+  font-weight: 600;
+}
+
+#headmaster > img {
+  width: 80%;
+}
+
+#headmaster > h3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2cm;
+}
+
+#headmaster > h3 > span {
+  font-size: 0.8cm;
+}
+
+#vision {
+  text-align: justify;
+  text-indent: 1cm;
+  font-style: italic;
+}
+
+#mission {
+  text-align: left;
+}
+
+#vision, #mission {
+  margin: 0.2cm 1cm;
 }
 
 
