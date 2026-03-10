@@ -1,0 +1,4 @@
+Tugas kelompok 4:
+Buatlah project web statis tentang web sekolah yang berisi
+menu, profil, jurusan, kontak, dan prestasi, menggunakan
+React dalam bentuk komponen

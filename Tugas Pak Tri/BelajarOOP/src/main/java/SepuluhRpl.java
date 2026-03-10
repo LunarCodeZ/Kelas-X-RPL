@@ -1,5 +1,24 @@
 import java.util.Scanner;
 
+// Parameter: 10 Maret 2026
+class PersegiPanjang {
+    int luas, keliling;
+    
+    void hitungLuas(int panjang, int lebar) {
+        luas = panjang * lebar;
+        System.out.println("Panjang: " + panjang);
+        System.out.println("Lebar: " + lebar);
+        System.out.println("Luas persegi panjang: " + luas + "\n");
+    }
+    
+    void hitungKeliling(int panjang, int lebar) {
+        keliling = 2 * (panjang + lebar);
+        System.out.println("Panjang: " + panjang);
+        System.out.println("Lebar: " + lebar);
+        System.out.println("Keliling persegi panjang: " + keliling + "\n");
+    }
+}
+
 public class SepuluhRpl {
 
     public static void main(String[] args) {
@@ -34,9 +53,33 @@ public class SepuluhRpl {
         SiswaRpl siswa2 = new SiswaRpl();
         siswa2.hobiSiswa();
         
-        System.out.println("\n=== Function: SiswaRpl ===");
-        siswa2.gantiHobi();
-        siswa2.hobiSiswa();
+//        System.out.println("\n=== Function: SiswaRpl ===");
+//        siswa2.gantiHobi();
+//        siswa2.hobiSiswa();
+        System.out.println("");
+
+        
+        
+        // === Parameter ===
+        System.out.println("=== Parameter ===");
+        int panjangPersegi, lebarPersegi;
+        Scanner inputParameter = new Scanner(System.in);
+        PersegiPanjang persegiSaya = new PersegiPanjang();
+        
+        System.out.print("Masukkan panjang: ");
+        panjangPersegi = inputParameter.nextInt();
+        System.out.print("Masukkan lebar: ");
+        lebarPersegi = inputParameter.nextInt();
+        System.out.print("\n");
+        
+        System.out.println("> Keliling Persegi Panjang");
+        persegiSaya.hitungKeliling(panjangPersegi, lebarPersegi);
+        // Disini, panjangPersegi dan lebarPersegi dinamakan dengan parameter
+        
+        System.out.println("> Luas Persegi Panjang");
+        persegiSaya.hitungLuas(panjangPersegi, lebarPersegi);
+        // Disini, panjangPersegi dan lebarPersegi dinamakan dengan parameter
+        
         
         // Dinamis
 //        MuridRpl siswa2 = new MuridRpl();
