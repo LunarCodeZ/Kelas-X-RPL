@@ -4,15 +4,15 @@ import headmaster from '../assets/headmaster-img3.jpg'
 
 function Profil() {
     return (
-        <section id='profil' className='container'>
+        <section id='profil' className='container page'>
             <h2>Profil</h2>
             <div className='profil-container'>
-                <div id='slogan' className='italic'>
+                <div id='slogan' className='italic grid-items'>
                     <blockquote>
                         " Unggul, Mumpuni, Berkarakter ! "
                     </blockquote>
                 </div>
-                <div id='overview'>
+                <div id='overview' className='grid-items'>
                     <h3>Penjelasan Singkat</h3>
                     <p>
                         <a href='#'>SMKN 2 Buduran</a> merupakan sebuah sekolah yang terletak di Jalan
@@ -24,21 +24,21 @@ function Profil() {
                         anda dalam menggapai cita-cita dan mimpi mereka.
                     </p>
                 </div>
-                <div id='headmaster'>
+                <div id='headmaster' className='grid-items'>
                     <p className='italic' style={ { color: "rgb(87, 87, 87)" } }>
                         Mari sambut kepala sekolah kita...
                     </p>
                     <img src={headmaster} alt="kepala sekolah smkn 2 buduran" loading='lazy'/>
                     <h3><span id='headmaster-name'>👩‍🏫</span> Dra. Hj. Mariya Ernawati, M.M</h3>
                 </div>
-                <div>
+                <div className='grid-items'>
                     <h3>Visi</h3>
                     <p id='vision' className='italic'>
                         " Mewujudkan Sumber Daya Manusia yang Berakhlak Mulia
                         yang Mampu Bersaing Dalam Dunia Kerja Secara Global "
                     </p>
                 </div>
-                <div>
+                <div className='grid-items'>
                     <h3>Misi</h3>
                     <ol id='mission'>
                         <li>
