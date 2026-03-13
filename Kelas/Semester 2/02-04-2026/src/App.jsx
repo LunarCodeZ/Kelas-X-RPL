@@ -1,16 +1,94 @@
 import { useState } from 'react'
 import './App.css'
 import { Profil } from './components/Profil'
-import { Jurusan } from './components/Jurusan'
+import { Jurusan, jurusanImages } from './components/Jurusan'
+import { Prestasi } from './components/Prestasi' 
 
 export const images = {
-  'rpl': "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D",
-  'ak': "https://wallpaperaccess.com/full/1393269.jpg",
-  'dkv': "https://thumbs.dreamstime.com/b/graphic-design-software-user-interface-real-tools-creativity-communication-concept-collage-paper-cut-composition-98421957.jpg",
-  'bd': "https://img.freepik.com/free-photo/map-lying-wooden-table_53876-105723.jpg?semt=ais_hybrid&w=740&q=80",
-  'lpb': "https://png.pngtree.com/thumb_back/fh260/background/20251009/pngtree-bank-employee-assisting-customer-with-financial-documents-and-laptop-professional-service-image_19813131.webp",
-  'mp': "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDiVj289ZSbzhsNHiv6HmNRv5QNzJAHnnj8Q&s"
+  'prestasiDiraih': [
+    {
+      'id': 1,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/11/jagoan-hosting-01-1080x500.jpg",
+      'kejuaraan': "Juara \"The Most Innovative Team\" dalam JHIC",
+      'tingkat': "nasional",
+      'peserta': "Tim SMKN 2 Buduran ( HENGKEL TZY )",
+      'kelas': "XI RPL",
+      'tempat': "Maspion IT",
+      'tanggal': "8 November 2025"
+    },
+    {
+      'id': 2,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/11/juara-karya-tulis-02-520x245.jpg",
+      'kejuaraan': "Juara II Lomba Karya Tulis Ilmiah Sejarah",
+      'tingkat': "-",
+      'peserta': "Tim SMKN 2 Buduran",
+      'kelas': "-",
+      'tempat': "Dinas Kebudayaan dan Pariwisata Jawa Timur",
+      'tanggal': "4 November 2025"
+    },
+    {
+      'id': 3,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/11/juara-papaernas-01-540x340.jpg",
+      'kejuaraan': "Juara I Tolak Peluru PEPARPENAS",
+      'tingkat': "nasional",
+      'peserta': "Erfa Ilmi Bayu Pratama",
+      'kelas': "XI BD 1",
+      'tempat': "ajang PEPARPENAS",
+      'tanggal': "7 November 2025"
+    },
+    {
+      'id': 4,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/05/lomba-LKS-1-720x340.jpg",
+      'kejuaraan': "Juara III IT Software Solutions For Business",
+      'tingkat': "-",
+      'peserta': "Mohammad Rifal Al Fahri",
+      'kelas': "XII RPL",
+      'tempat': "-",
+      'tanggal': "26 April 2025"
+    },
+    {
+      'id': 5,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/03/2024-juara-paskibra-3-629x340.jpg",
+      'kejuaraan': "Juara LKPBB SHIP tingkat SMA/SMK",
+      'tingkat': "provinsi jawa",
+      'peserta': "Tim Paskibra",
+      'kelas': "-",
+      'tempat': "-",
+      'tanggal': "16 September 2024"
+    },
+    {
+      'id': 6,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/03/GSS-2024-604x340-1.jpg",
+      'kejuaraan': "Juara I Kompetisi Gala Kreasi Video GSS",
+      'tingkat': "nasional",
+      'peserta': "Tim SMKN 2 Buduran",
+      'kelas': "-",
+      'tempat': "Sultan Hotel Jakarta",
+      'tanggal': "9 Agustus 2024"
+    },
+    {
+      'id': 7,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/03/os2n-pencak-silat-1-1024x576-1-520x245.jpg",
+      'kejuaraan': "Juara I O2SN Pencak Silat Putra",
+      'tingkat': "",
+      'peserta': "M. Alvin",
+      'kelas': "-",
+      'tempat': "-",
+      'tanggal': "21 Mei 2024"
+    },
+    {
+      'id': 8,
+      'gambar': "https://smkn2buduran.sch.id/wp-content/uploads/2025/05/lomba-aip-2-710x340.jpg",
+      'kejuaraan': "Juara I Lomba Artikel Ilmiah Populer",
+      'tingkat': "-",
+      'peserta': "Kepala Sekolah dan Guru SMKN 2 Buduran",
+      'kelas': "-",
+      'tempat': "",
+      'tanggal': "19 April 2025"
+    },
+  ]
 };
+
 
 function Header() {
   return (
@@ -86,7 +164,7 @@ function App() {
             <a href='#jurusan' className={ page == "jurusan" ? 'active' : '' } onClick={renderNavbar} id='navlink3'>Jurusan</a>
           </li>
           <li>
-            <a href='#' className={ page == "prestasi" ? 'active' : '' } onClick={renderNavbar} id='navlink4'>Prestasi</a>
+            <a href='#prestasi' className={ page == "prestasi" ? 'active' : '' } onClick={renderNavbar} id='navlink4'>Prestasi</a>
           </li>
           <li>
             <a href='#' className={ page == "kontak" ? 'active' : '' } onClick={renderNavbar} id='navlink5'>Kontak</a>
@@ -104,13 +182,13 @@ function App() {
             </div>
           </a>
           <a href='#jurusan' className='grid-items' onClick={renderNavbar} id='jurusan-link'>
-            <img loading='lazy' src={images['rpl']} alt="" />
+            <img loading='lazy' src={jurusanImages['rpl']} alt="" />
             <div>
               <h3>Jurusan</h3>
               <p>Jelajahi jurusan-jurusan yang diminati oleh peserta didik hanya disini...</p>
             </div>
           </a>
-          <a href='#' className='grid-items' onClick={renderNavbar} id='prestasi-link'>
+          <a href='#prestasi' className='grid-items' onClick={renderNavbar} id='prestasi-link'>
             <img loading='lazy' src="https://t4.ftcdn.net/jpg/09/25/67/07/360_F_925670742_3twHVff424j3wAZ3ev5Sc7PidNyhcfY1.jpg" alt="" />
             <div>
               <h3>Prestasi</h3>
@@ -133,6 +211,7 @@ function App() {
         </section>
         <Profil />
         <Jurusan />
+        <Prestasi />
       </section>
       <Footer />
     </>

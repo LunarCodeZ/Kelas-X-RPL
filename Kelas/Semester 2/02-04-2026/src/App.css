@@ -212,6 +212,48 @@ header > div > img {
 }
 
 
+/* Prestasi */
+#prestasi-container {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  gap: 3em;
+}
+
+.prestasi {
+  padding: 0 0.5em 1em 0.5em;
+}
+
+.prestasi > h3 {
+  text-align: center;
+  padding: 0 1em;
+}
+
+.prestasi > img {
+  width: 100%;
+  height: 140px;
+}
+
+.prestasi > p {
+  text-align: justify;
+  padding: 0 1em;
+  text-indent: 20px;
+}
+
+.more-prestasi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  /* color: rgb(120, 120, 120); */
+}
+
+.prestasi > strong {
+  font-size: 4em;
+  text-align: center;
+  color: rgb(0, 255, 76);
+}
+
+
 /* Footer */
 #footer-items > p {
   cursor: pointer;
