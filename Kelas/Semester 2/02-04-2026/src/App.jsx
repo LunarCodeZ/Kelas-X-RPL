@@ -2,7 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import { Profil } from './components/Profil'
 import { Jurusan, jurusanImages } from './components/Jurusan'
-import { Prestasi } from './components/Prestasi' 
+import { Prestasi } from './components/Prestasi'
+import { Kontak } from './components/Kontak'
 
 export const images = {
   'prestasiDiraih': [
@@ -105,10 +106,10 @@ function Header() {
 function Footer() {
   return (
     <footer>
-      <div id='footer-items'>
+      {/* <div id='footer-items'>
         <p>Saran & Masukan</p>
         <p>Dukungan</p>
-      </div>
+      </div> */}
       <p>
         &copy; SMKN 2 Buduran - All Rights Reserved
         <br />
@@ -167,7 +168,7 @@ function App() {
             <a href='#prestasi' className={ page == "prestasi" ? 'active' : '' } onClick={renderNavbar} id='navlink4'>Prestasi</a>
           </li>
           <li>
-            <a href='#' className={ page == "kontak" ? 'active' : '' } onClick={renderNavbar} id='navlink5'>Kontak</a>
+            <a href='#kontak' className={ page == "kontak" ? 'active' : '' } onClick={renderNavbar} id='navlink5'>Kontak</a>
           </li>
         </ul>
       </nav>
@@ -198,7 +199,7 @@ function App() {
               </p>
             </div>
           </a>
-          <a href='#' className='grid-items' onClick={renderNavbar} id='kontak-link'>
+          <a href='#kontak' className='grid-items' onClick={renderNavbar} id='kontak-link'>
             <img loading='lazy' src="https://img.freepik.com/foto-gratis/tampilan-atas-gelembung-obrolan-dengan-gagang-telepon-dan-ruang-salin_23-2148796078.jpg" alt="" />
             <div>
               <h3>Kontak</h3>
@@ -212,6 +213,7 @@ function App() {
         <Profil />
         <Jurusan />
         <Prestasi />
+        <Kontak />
       </section>
       <Footer />
     </>
