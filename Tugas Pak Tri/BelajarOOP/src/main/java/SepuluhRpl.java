@@ -81,6 +81,12 @@ public class SepuluhRpl {
         // Disini, panjangPersegi dan lebarPersegi dinamakan dengan parameter
         
         
+        
+        // === Overloading ===
+        System.out.println("");
+        System.out.println("=== Overloading ===");
+        
+        
         // Dinamis
 //        MuridRpl siswa2 = new MuridRpl();
 //        Scanner input = new Scanner(System.in);
