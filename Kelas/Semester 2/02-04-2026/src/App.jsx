@@ -4,6 +4,7 @@ import { Profil } from './components/Profil'
 import { Jurusan, jurusanImages } from './components/Jurusan'
 import { Prestasi } from './components/Prestasi'
 import { Kontak } from './components/Kontak'
+import { Ppdb } from './components/Ppdb'
 
 export const images = {
   'prestasiDiraih': [
@@ -89,6 +90,32 @@ export const images = {
     },
   ]
 };
+const menus = [
+  {
+    'id': 1,
+    'name': "profil",
+    'img': "https://getwallpapers.com/wallpaper/full/f/e/a/933785-school-backgrounds-2048x1152-screen.jpg",
+    'description': "Mari kita mengenal lebih dekat dengan sekolah ini..."
+  },
+  {
+    'id': 2,
+    'name': "jurusan",
+    'img': jurusanImages['rpl'],
+    'description': "Jelajahi jurusan-jurusan yang diminati oleh peserta didik hanya disini..."
+  },
+  {
+    'id': 3,
+    'name': "prestasi",
+    'img': "https://t4.ftcdn.net/jpg/09/25/67/07/360_F_925670742_3twHVff424j3wAZ3ev5Sc7PidNyhcfY1.jpg",
+    'description': "Mari kita lihat berbagai macam penghargaan-penghargaan yang diraih oleh siswa-siswi yang telah bersekolah disini..."
+  },
+  {
+    'id': 4,
+    'name': "kontak",
+    'img': "https://img.freepik.com/foto-gratis/tampilan-atas-gelembung-obrolan-dengan-gagang-telepon-dan-ruang-salin_23-2148796078.jpg",
+    'description': "Ada yang ingin disampaikan ?, ayo hubungi pihak sekolah dengan mudah, kapanpun dan dimanapun melalui halaman ini..."
+  }
+];
 
 
 function Header() {
@@ -123,7 +150,7 @@ function Footer() {
 let currentProps;
 
 function App() {
-  const listedPages = ["menu", "profil", "jurusan", "prestasi", "kontak"];
+  const listedPages = ["menu", "profil", "jurusan", "prestasi", "kontak", "ppdb"];
   const [page, setPage] = useState("menu")
 
   function renderNavbar(props) {
@@ -146,10 +173,6 @@ function App() {
     }
   }
 
-  function scrollFunction() {
-    console.log("Hello world");
-  }
-
   return (
     <>
       <nav id='navbar'>
@@ -170,50 +193,29 @@ function App() {
           <li>
             <a href='#kontak' className={ page == "kontak" ? 'active' : '' } onClick={renderNavbar} id='navlink5'>Kontak</a>
           </li>
+          <li>
+            <a href='#ppdb' className={ page == "ppdb" ? 'active' : '' } onClick={renderNavbar} id='navlink6'>Ppdb</a>
+          </li>
         </ul>
       </nav>
       <Header />
       <section>
         <section className='container' id='menu-container'>
-          <a href='#profil' className='grid-items' onClick={renderNavbar} id='profil-link'>
-            <img loading='lazy' src="https://getwallpapers.com/wallpaper/full/f/e/a/933785-school-backgrounds-2048x1152-screen.jpg" alt="" />
-            <div>
-              <h3>Profil</h3>
-              <p>Mari kita mengenal lebih dekat dengan sekolah ini...</p>
-            </div>
-          </a>
-          <a href='#jurusan' className='grid-items' onClick={renderNavbar} id='jurusan-link'>
-            <img loading='lazy' src={jurusanImages['rpl']} alt="" />
-            <div>
-              <h3>Jurusan</h3>
-              <p>Jelajahi jurusan-jurusan yang diminati oleh peserta didik hanya disini...</p>
-            </div>
-          </a>
-          <a href='#prestasi' className='grid-items' onClick={renderNavbar} id='prestasi-link'>
-            <img loading='lazy' src="https://t4.ftcdn.net/jpg/09/25/67/07/360_F_925670742_3twHVff424j3wAZ3ev5Sc7PidNyhcfY1.jpg" alt="" />
-            <div>
-              <h3>Prestasi</h3>
-              <p>
-                Mari kita lihat berbagai macam penghargaan-penghargaan yang diraih oleh
-                siswa-siswi yang telah bersekolah disini...
-              </p>
-            </div>
-          </a>
-          <a href='#kontak' className='grid-items' onClick={renderNavbar} id='kontak-link'>
-            <img loading='lazy' src="https://img.freepik.com/foto-gratis/tampilan-atas-gelembung-obrolan-dengan-gagang-telepon-dan-ruang-salin_23-2148796078.jpg" alt="" />
-            <div>
-              <h3>Kontak</h3>
-              <p>
-                Ada yang ingin disampaikan ?, ayo hubungi pihak sekolah dengan mudah, kapanpun dan dimanapun
-                melalui halaman ini...
-              </p>
-            </div>
-          </a>
+          { menus.map(menu => 
+            <a key={menu.id} href={`#${menu.name}`} className='grid-items' onClick={renderNavbar} id={`${menu.name}-link`}>
+              <img loading='lazy' src={menu.img} alt="" />
+              <div>
+                <h3>{ `${menu.name[0].toUpperCase()}${menu.name.substring(1)}`}</h3>
+                <p>{ menu.description }</p>
+              </div>
+            </a>
+          ) }
         </section>
         <Profil />
         <Jurusan />
         <Prestasi />
         <Kontak />
+        <Ppdb />
       </section>
       <Footer />
     </>
