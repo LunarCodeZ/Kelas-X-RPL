@@ -81,6 +81,9 @@ public class AplPerkalian {
                         }
                     }
                     break;
+                    
+                case "4":
+                    
 
                 default:
                     break;
@@ -93,7 +96,9 @@ public class AplPerkalian {
     }
     
     public void main(String[] args) {
-        mulaiPertamaKali();
+//        mulaiPertamaKali();
+        Perkalian objek = new Perkalian();
+        System.out.println(objek.kalkulasiPerkalian(2, 1, 5, "X RPL"));
     }
     
 }

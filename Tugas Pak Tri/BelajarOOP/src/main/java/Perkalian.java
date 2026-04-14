@@ -11,6 +11,14 @@ public class Perkalian {
         return a * b * c;
     }
     
+    // Function 3
+    int kalkulasiPerkalian(int a, int b, int c, String d) {
+        System.out.println("Method kalkulasiPerkalian: " + d);
+        int hasil = a * b * c;
+        return hasil;
+    }
+    
+    
     // Function 3: Perkalian banyak bilangan
     int kalkulasiPerkalian(ArrayList<Integer> banyakBilangan) {
         int jumlah = 1;
