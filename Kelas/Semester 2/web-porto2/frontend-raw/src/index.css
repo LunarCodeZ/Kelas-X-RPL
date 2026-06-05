@@ -1,7 +1,12 @@
+@import 'tailwindcss';
+
 html {
   scroll-behavior: smooth;
+  /* background-image: linear-gradient(to bottom right, rgb(27, 27, 27), rgb(0, 40, 46));
+  background-repeat: no-repeat; */
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(27, 27, 27);
 }

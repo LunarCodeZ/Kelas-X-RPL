@@ -1,0 +1,33 @@
+==================
+   Page Contents
+==================
+
+Login Page:
+> User Information
+- Nickname
+- Fullname
+- Date of Birth (date, month, year)
+- Dream 1, 2, 3
+
+> About
+- Tag 1, 2, 3
+- Short Introduction
+- Long Introduction
+
+> Project (Up to 12)
++ Add a new project
+-> Project name
+-> Image
+-> Description
+-> 3 Tags
+-> Visit Link
+
+> Journey
+- Elementary School: School name | Goal
+- Junior High School: School name | Goal
+- Vocational High School: School name | Goal
+- College: College name | Goal
+- Bachelor Degree Goal
+
+> Funfacts (Up to 3)
+-> string

@@ -1,0 +1,40 @@
+==============
+   Database
+==============
+
+User:
+- id
+- nickname
+- fullname
+- date of birth
+- first, second, third dream
+- first, second, third tag
+- short introduction
+- long introduction
+- first, second, third funfact
+
+Project:
+- id
+- name
+- image
+- description
+- first_tag, second_tag, third_tag
+- user_id
+
+Journey:
+- school1_name
+- school1_start_year
+- school1_end_year
+- goal_1
+- school2_name
+- school2start_year
+- school2end_year
+- goal_2
+- school3_name
+- school3tart_year
+- school3end_year
+- goal_3
+- college_name
+- college_start_year
+- college_end_year
+- goal_4

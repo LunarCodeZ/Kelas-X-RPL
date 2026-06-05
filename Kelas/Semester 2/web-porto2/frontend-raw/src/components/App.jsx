@@ -1,8 +1,11 @@
-import '../css/App.css'
+import Navbar from './Navbar.jsx'
 import Login from './Login.jsx'
 
 export default function App() {
   return (
-    <Login />
+    <>
+      {/* <Navbar /> */}
+      <Login />
+    </>
   )
 }
